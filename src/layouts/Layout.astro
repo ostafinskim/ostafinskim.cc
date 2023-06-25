@@ -1,0 +1,70 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource/inter/variable.css";
+
+export interface Props {
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
+
+const { title } = Astro.props;
+
+const makeTitle = title
+  ? title + " | " + "web developer"
+  : "ostafinskim.cc - web developer";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description="Personal website"
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@ostafinskim",
+        site: "@ostafinskim.cc",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `ostafinskim.cc - web developer`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "ostafinskim.cc - Homepage Screenshot",
+        },
+      }}
+    />
+  </head>
+  <body>
+    <div class="max-w-5xl mx-auto my-0">
+      <Navbar />
+      <slot />
+      <Footer />
+      <style is:global>
+        /* Improve Page speed */
+        /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+        img {
+          content-visibility: auto;
+        }
+      </style>
+    </div>
+  </body>
+</html>
