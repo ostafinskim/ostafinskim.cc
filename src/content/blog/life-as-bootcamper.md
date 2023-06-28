@@ -6,7 +6,7 @@ image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
     alt: "frontend master"
 }
-publishDate: "2023-06-28 13:40"
+publishDate: "2023-06-27 13:40"
 category: "general"
 author: "Miro Ostafinski"
 tags: [general]
