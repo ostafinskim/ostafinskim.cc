@@ -3,15 +3,12 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import { string } from "astro/zod";
 
 interface item {
   title: string;
   path: string;
-  children?: []
+  children?: [];
 }
-
-
 
 const menuitems = [
   // {
@@ -43,8 +40,8 @@ const menuitems = [
 ] as item[];
 ---
 
-<Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+<Container class="wrapper">
+  <header class="flex flex-col lg:flex-row justify-between items-center">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
@@ -73,7 +70,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-4 text-gray-600 hover:text-gray-900">
                       {item.title}
                     </a>
                   </li>
@@ -86,3 +83,40 @@ const menuitems = [
     </Astronav>
   </header>
 </Container>
+
+<style lang="scss">
+  .wrapper.bg {
+    transition: all 0.1s ease;
+    background: black;
+
+    * {
+      color: white;
+    }
+
+    @media screen and (min-width: 1025px) {
+      background: transparent;
+      * {
+        color: #000;
+      }
+    }
+  }
+  header {
+    padding: 32px 0;
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector("#astronav-menu");
+  const wrapper = document.querySelector(".wrapper");
+  const nav = document.querySelector("#astronav-toggle");
+
+  toggle?.addEventListener("click", () => {
+    wrapper?.classList.toggle("bg");
+  });
+
+  window.addEventListener("resize", () => {
+    if (nav?.classList.contains("hidden")) {
+      wrapper?.classList.remove("bg");
+    }
+  });
+</script>
