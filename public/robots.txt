@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: @todo
+Sitemap: https://ostafinski.cc

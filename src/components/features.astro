@@ -14,14 +14,13 @@ const features = [
     description:
       "Accessibility is incredibly important, yet often overlooked in traditional digital design and development education. We all need to know how to create beautiful, accessible, and inclusive digital experiences.",
     icon: "mdi:accessible",
-    link: 'https://www.a11yproject.com/',
   },
   {
     title: "Lifelong learner",
     description:
       "Whether pursuing personal interests and passions or chasing professional ambitions, lifelong learning can help us to achieve personal fulfillment and satisfaction. ",
     icon: "bx:bxs-data",
-  }
+  },
 ];
 ---
 
@@ -34,19 +33,15 @@ const features = [
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
-      <a href={item.link}>
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-            <Icon class="text-white" name={item.icon} />
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-            <p class="text-slate-500 mt-2 leading-relaxed">
-              {item.description}
-            </p>
-          </div>
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
         </div>
-      </a>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
     ))
   }
 </div>
