@@ -19,7 +19,7 @@ const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "web developer"
-  : "ostafinskim.cc - web developer";
+  : "ostafinski.cc - web developer";
 ---
 
 <!DOCTYPE html>
@@ -37,30 +37,30 @@ const makeTitle = title
       canonical={canonicalURL}
       twitter={{
         creator: "@ostafinskim",
-        site: "@ostafinskim.cc",
+        site: "@ostafinski.cc",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `ostafinskim.cc - web developer`,
+          title: `ostafinski.cc - web developer`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "ostafinskim.cc - Homepage Screenshot",
+          alt: "ostafinski.cc - Homepage Screenshot",
         },
       }}
     />
 
     <!-- HTML Meta Tags -->
-    <title>ostafinskim.cc - web developer</title>
+    <title>ostafinski.cc - web developer</title>
     <meta name="description" content="Personal website" />
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://ostafinski.cc" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ostafinskim.cc - web developer" />
+    <meta property="og:title" content="ostafinski.cc - web developer" />
     <meta property="og:description" content="Personal website" />
     <meta property="og:image" content="https://ostafinski.cc/opengraph.jpg" />
 
@@ -68,7 +68,7 @@ const makeTitle = title
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="ostafinski.cc" />
     <meta property="twitter:url" content="https://ostafinski.cc" />
-    <meta name="twitter:title" content="ostafinskim.cc - web developer" />
+    <meta name="twitter:title" content="ostafinski.cc - web developer" />
     <meta name="twitter:description" content="Personal website" />
     <meta name="twitter:image" content="https://ostafinski.cc/opengraph.jpg" />
 
