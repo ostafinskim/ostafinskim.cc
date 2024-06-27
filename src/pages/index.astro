@@ -1,18 +1,39 @@
 ---
-import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
-import Features from "@components/features.astro";
-import Footer from "@components/footer.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
-import Layout from "@layouts/Layout.astro";
+import Layout from "layouts/Layout.astro";
+
+const title = 'Miro Ostafinski — Full Stack Web Developer';
 ---
 
-<Layout title="Miro Ostafinski">
-  <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
-  </Container>
+<Layout {title} overrideTitle>
+	<article class="my-auto pb-8">
+		<a class="inline-block text-slate-800">
+			<h1 class="title relative inline-flex flex-col-reverse sm:flex-row mb-3">
+				<div class="relative inline-block text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight">
+					<span class="title-gradient">Miro Ostafinski</span>
+					<span class="title-cover absolute inset-0 transition-opacity duration-500 print:hidden" aria-hidden="true">
+						Miro Ostafinski
+					</span>
+				</div>
+			</h1>
+		</a>
+		<p class="block text-md w-[80%] md:w-[85%] sm:text-xl font-medium sm:leading-relaxed text-slate-400">
+			<span class="transition-color duration-300 hover:text-slate-600 dark:hover:text-slate-200">
+				💼 Web Developer at
+				<a class="border-b dark:border-slate-600 dark:hover:border-slate-400" href="https://studio24.net">Studio24</a>
+			</span>{' '}
+			<br class="hidden md:inline" />
+			<span class="transition-color duration-300 hover:text-slate-600 dark:hover:text-slate-200">
+				💻 I work with React and TypeScript, as well as Node.js and Laravel and more.
+				<br class="hidden md:inline" />
+			<span class="block my-6 transition-color duration-300 hover:text-slate-600 dark:hover:text-slate-200">
+				<a href="/about#projects" class="border-b dark:border-slate-600 dark:hover:border-slate-400">
+					See my work
+				</a>{' '}
+				or{' '}
+				<a href="/blog" class="border-b dark:border-slate-600 dark:hover:border-slate-400">
+					read my blog
+				</a>{' '}
+			</span>
+		</p>
+	</article>
 </Layout>
