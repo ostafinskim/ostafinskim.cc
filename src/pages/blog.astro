@@ -1,74 +1,38 @@
 ---
-import { getCollection } from "astro:content";
-import { Picture } from "@astrojs/image/components";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
+import BlogItem from "components/BlogItem.astro";
+import Layout from "layouts/Layout.astro";
 
-// Filter blog entries with 'draft: false' & date before current date
-const publishedBlogEntries = await getCollection("blog", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
+type PostFrontMatter = {
+	title: string;
+	summary: string;
+	original?: {
+		url: string
+		external?: boolean
+	}
+	publishedAt: string
+};
 
-// Sort content entries by publication date
-publishedBlogEntries.sort(function (a, b) {
-  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
-});
+
+const title = 'Blog'
+const description = 'Here is my blog. I started to write not so long ago and trying my best'
+const posts = await Astro.glob<PostFrontMatter>('./blog/*.md');
+
+posts.sort((a, b) => Date.parse(a.frontmatter.publishedAt) - Date.parse(b.frontmatter.publishedAt))
 ---
 
-<Layout title="Miro Ostafinski | blog">
-  <Container>
-    <Sectionhead>
-      <Fragment slot="title">Blog</Fragment>
-      <Fragment slot="desc">—</Fragment>
-    </Sectionhead>
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
-        {
-          publishedBlogEntries.map((blogPostEntry, index) => (
-            <li>
-              <a href={`/blog/${blogPostEntry.slug}`}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  <Picture
-                    src={blogPostEntry.data.image.src}
-                    alt={blogPostEntry.data.image.alt}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    widths={[200, 400, 800]}
-                    aspectRatio="16:9"
-                    background="#ffffff"
-                    fit="cover"
-                    position="center"
-                    loading={index <= 2 ? "eager" : "lazy"}
-                    decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md"
-                  />
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {blogPostEntry.data.category}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {blogPostEntry.data.title}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
-                        {blogPostEntry.data.author}
-                      </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {blogPostEntry.data.publishDate.toDateString()}
-                      </time>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </main>
-  </Container>
+<Layout {title} {description}>
+	<svg class="hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+		<symbol id="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+				d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+		</symbol>
+	</svg>
+	<h1 class="font-bold text-4xl sm:text-5xl tracking-tight mb-6 sm:mb-10">Blog</h1>
+	<ul class="space-y-8 sm:space-y-12">
+		{posts.map(({ frontmatter, url }) => (
+		<li>
+			<BlogItem {url} {...frontmatter} />
+		</li>
+		))}
+	</ul>
 </Layout>

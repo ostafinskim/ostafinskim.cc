@@ -1,0 +1,46 @@
+---
+import calcReadingTime from 'reading-time'
+import { format, parse } from 'date-fns'
+
+import photo from 'assets/images/photo.jpg';
+import Layout from "layouts/Layout.astro";
+import { Image } from 'astro:assets';
+
+const { title, publishedAt, original } = Astro.props.content
+const publishDate = format(parse(publishedAt, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy')
+const { text: readingTime } = calcReadingTime(Astro.props.rawContent())
+---
+
+<Layout title={title} canonical={original?.url}>
+	<article class="my-6" item-prop="blogPost" item-scope item-type="https://schema.org/BlogPosting">
+		<h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 " item-prop="name headline">
+			{title}
+		</h1>
+		<header class="flex items-center mb-8 sm:mb-10">
+			<figure
+				class="bg-slate-200 w-8 h-8 sm:w-6 sm:h-6 mr-4 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-slate-200 dark:ring-slate-800">
+				<Image src={photo} alt="Miro Ostafinski" />
+			</figure>
+			<div class="flex flex-col sm:flex-row sm:justify-between sm:w-full text-sm">
+				<div class="text-slate-600 dark:text-slate-400">
+					<span item-prop="author" item-scope item-type="https://schema.org/Person">
+						<span item-prop="name">Miro Ostafinski</span>
+					</span>
+					&nbsp;at&nbsp;
+					<time item-prop="datePublished" date-time={publishedAt}>
+						{publishDate}
+					</time>
+				</div>
+				<div class="text-slate-500">
+					<span class="inline-block mx-2" role="separator">
+						&bull;
+					</span>
+					{readingTime}
+				</div>
+			</div>
+		</header>
+		<section class="prose dark:prose-dark w-full mb-6 mx-auto" item-prop="articleBody">
+			<slot />
+		</section>
+	</article>
+</Layout>
