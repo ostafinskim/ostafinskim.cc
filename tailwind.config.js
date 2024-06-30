@@ -3,7 +3,7 @@ import typography from '@tailwindcss/typography'
 /** @type {import('tailwindcss').Config} */
 const config ={
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: 'media',
+	darkMode: 'class',
 	theme: {
 		extend: {
 			typography: (theme) => ({
@@ -43,6 +43,7 @@ const config ={
 					},
 				},
 				dark: {
+					class: 'dark',
 					css: {
 						color: theme('colors.slate.300'),
 						a: {
