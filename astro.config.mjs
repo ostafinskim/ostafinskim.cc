@@ -16,8 +16,8 @@ export default defineConfig({
         syntaxHighlight: 'shiki',
         shikiConfig: {
             themes: {
-                light: 'dark-plus',
-                dark: "dark-plus",
+                light: 'vitesse-dark',
+                dark: "vitesse-dark",
             },
             langs: [
                 'js',
@@ -35,7 +35,6 @@ export default defineConfig({
             rehypeSlug,
             rehypeAutoLinkHeadings,
             rehypeCodeTitles,
-            rehypePrism,
         ],
         remarkPlugins: [remarkReadingTime],
     },

@@ -1,5 +1,5 @@
 ---
-title: Into to the Web Components
+title: Intro to the Web Components
 pubDate: "2022-07-01"
 description: "Learn how to create your first vanilla JavaScript web component."
 lang: en
