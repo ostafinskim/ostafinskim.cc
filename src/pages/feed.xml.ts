@@ -1,34 +1,23 @@
 import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
-type Context = {
+interface Context {
     site: string;
-};
-
-type Post = {
-    frontmatter: {
-        title: string;
-        summary: string;
-        publishedAt: string;
-    };
-    slug: string;
-};
+}
 
 export async function GET(context: Context) {
-    const posts = await import.meta.glob<Post>('./blog/*.md');
-    const items = await Promise.all(
-        Object.values(posts).map(async (post) => await post())
-    );
-
-    console.log(items);
+    const posts = await getCollection('blog');
     return rss({
-        title: `Miro Ostafinski's Blog`,
-        description: "A humble Astronaut's guide to the stars",
+        title: 'Miro Ostafinski - Full Stack Developer',
+        description:
+            'Miro Ostafinski - Full Stack Developer - Blog about web development, programming, and software engineering.',
         site: context.site,
-        items: items.map((post) => ({
-            link: `/blog/${post.slug}/`,
-            title: post.frontmatter.title,
-            description: post.frontmatter.summary,
-            pubDate: new Date(Date.parse(post.frontmatter.publishedAt)),
+        items: posts.map((post) => ({
+            title: post.data.title,
+            pubDate: new Date(post.data.pubDate),
+            description: post.data.description,
+            link: `/posts/${post.slug}/`,
         })),
+        customData: `<language>en-us</language>`,
     });
 }

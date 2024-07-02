@@ -1,38 +1,44 @@
 ---
-import LangBadge from './LangBadge.astro'
+import LangBadge from './LangBadge.astro';
 
-export type Props = {
-	title: string
-	summary: string
-	url?: string | undefined
-	lang?: string| undefined
-	original?: {
-		url: string
-		external?: boolean| undefined
-	}| undefined
-}
+const {
+	title,
+	url,
+	data: { lang, description },
+} = Astro.props;
 
-const { title, summary, url = '', lang, original } = Astro.props
+const descriptionEllipsis = description.split(' ').slice(0, 25).join(' ');
+
 ---
 
-<article class="relative">
-	<div class="flex flex-col sm:flex-row justify-between mb-2">
-		<h3 class="flex mb-1 sm:mb-0 text-lg sm:text-xl font-bold w-full text-slate-900 dark:text-slate-100">
-			<a href={original?.external ? original?.url : url}
-				class="block-link transition-opacity opacity-80 hover:opacity-100">
-				{lang && (
-				<span class="order-2 self-start ml-auto sm:order-none sm:ml-0 sm:mr-2">
-					<LangBadge>{lang}</LangBadge>{' '}
-				</span>
-				)}
+<article class='relative'>
+	<div class='flex flex-col sm:flex-row justify-between mb-2'>
+		<h3
+			class='flex mb-1 sm:mb-0 text-lg sm:text-xl font-bold w-full text-slate-900 dark:text-slate-100'
+		>
+			<a
+				href={url}
+				class='block-link transition-opacity opacity-80 hover:opacity-100'
+			>
+				{
+					lang && (
+						<span class='order-2 self-start ml-auto sm:order-none sm:ml-0 sm:mr-2'>
+							<LangBadge>{lang}</LangBadge>{' '}
+						</span>
+					)
+				}
 				{title}
-				{original?.external && (
-				<svg aria-hidden="true" class="ml-2 w-4 h-4 inline align-baseline">
-					<use xlink:href="#external-link-icon"></use>
+				<svg
+					aria-hidden='true'
+					class='ml-2 w-4 h-4 inline align-baseline'
+				>
+					<use xlink:href='#external-link-icon'></use>
 				</svg>
-				)}
 			</a>
 		</h3>
 	</div>
-	<p class="text-slate-600 dark:text-slate-400 max-w-2xl">{summary}</p>
+	<p class='text-slate-600 dark:text-slate-400 max-w-2xl'>
+		{descriptionEllipsis}
+		<a href={url} class="inline-block font-semibold mt-2 hover:text-slate-800"> [more here] ⤵</a>
+	</p>
 </article>

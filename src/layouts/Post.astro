@@ -1,15 +1,12 @@
 ---
-import calcReadingTime from 'reading-time'
 import { format, parse } from 'date-fns'
 
 import Layout from "layouts/Layout.astro";
-
-const { title, publishedAt, original } = Astro.props.content
-const publishDate = format(parse(publishedAt, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy')
-const { text: readingTime } = calcReadingTime(Astro.props.rawContent())
+const { timeToRead, frontmatter: {title, pubDate } } = Astro.props;
+const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy');
 ---
 
-<Layout title={title} canonical={original?.url}>
+<Layout title={title} canonical={title}>
 	<article class="my-6" item-prop="blogPost" item-scope item-type="https://schema.org/BlogPosting">
 		<h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 " item-prop="name headline">
 			{title}
@@ -25,7 +22,7 @@ const { text: readingTime } = calcReadingTime(Astro.props.rawContent())
 						<span item-prop="name">Miro Ostafinski</span>
 					</span>
 					&nbsp;at&nbsp;
-					<time item-prop="datePublished" date-time={publishedAt}>
+					<time item-prop="datePublished" date-time={publishDate}>
 						{publishDate}
 					</time>
 				</div>
@@ -33,7 +30,7 @@ const { text: readingTime } = calcReadingTime(Astro.props.rawContent())
 					<span class="inline-block mx-2" role="separator">
 						&bull;
 					</span>
-					{readingTime}
+					{timeToRead}
 				</div>
 			</div>
 		</header>

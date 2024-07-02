@@ -8,6 +8,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutoLinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism';
+import { remarkReadingTime } from './remark-reading-time.js';
 
 export default defineConfig({
     site: 'https://ostafinski.cc',
@@ -15,8 +16,8 @@ export default defineConfig({
         syntaxHighlight: 'shiki',
         shikiConfig: {
             themes: {
-                light: 'vitesse-dark',
-                dark: "vitesse-dark",
+                light: 'dark-plus',
+                dark: "dark-plus",
             },
             langs: [
                 'js',
@@ -36,6 +37,7 @@ export default defineConfig({
             rehypeCodeTitles,
             rehypePrism,
         ],
+        remarkPlugins: [remarkReadingTime],
     },
     integrations: [
         tailwind({ config: { applyBaseStyles: false } }),
