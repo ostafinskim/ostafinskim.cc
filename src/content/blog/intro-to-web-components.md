@@ -1,6 +1,6 @@
 ---
 title: Intro to the Web Components
-pubDate: "2022-07-01"
+pubDate: "2024-06-01"
 description: "Learn how to create your first vanilla JavaScript web component."
 lang: en
 image:
@@ -35,20 +35,20 @@ Let's create a simple Web Component that displays a custom greeting message.
 // Define a new custom element called 'x-greeting'
 class Greeting extends HTMLElement {
   constructor() {
-	super();
-	// Create a shadow DOM for the custom element
-	const shadow = this.attachShadow({ mode: 'open' });
-	// Get the 'text' attribute value or use a default message
-	const text = this.getAttribute('text') || 'Hello, World!';
-	// Create a paragraph element and set its text content
-	const p = document.createElement('p');
-	p.textContent = text;
-	// Append the paragraph element to the shadow DOM
-	shadow.appendChild(p);
+ super();
+ // Create a shadow DOM for the custom element
+ const shadow = this.attachShadow({ mode: 'open' });
+ // Get the 'text' attribute value or use a default message
+ const text = this.getAttribute('text') || 'Hello, World!';
+ // Create a paragraph element and set its text content
+ const p = document.createElement('p');
+ p.textContent = text;
+ // Append the paragraph element to the shadow DOM
+ shadow.appendChild(p);
   }
 }
 // Register the custom element with the browser
-customElements.define('x-greeting', G customElements.define('x-greeting', Greeting);
+customElements.define('x-greeting', Greeting);
 ```
 
 2. Create an HTML file called `index.html` and add the following code:
@@ -75,4 +75,3 @@ In this example, we created a custom element called `x-greeting` that displays a
 ## Conclusion
 
 Web Components are a powerful way to create reusable and encapsulated components for the web. They are based on existing web standards and are supported by all modern browsers. If you know HTML and a bit of JavaScript, you already know enough to write your first Web Component. Give it a try and see how easy it is to create your own custom elements.
-.
