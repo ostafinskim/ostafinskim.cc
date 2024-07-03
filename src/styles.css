@@ -219,3 +219,11 @@ img {
 		color: #ec1d58 !important;
 	}
 }
+
+@media (prefers-color-scheme: light) {
+    .dark\:prose-dark :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+	.dark\:prose-dark :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+		background-color: transparent !important;
+		color: #ec1d58 !important;
+	}
+}
