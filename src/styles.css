@@ -215,7 +215,7 @@ img {
 @media (prefers-color-scheme: dark) {
     .dark\:prose-dark :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
 	.dark\:prose-dark :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-		/* background-color: transparent !important; */
+		background-color: transparent !important;
 		color: #ec1d58 !important;
 	}
 }
