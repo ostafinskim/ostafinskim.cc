@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
@@ -10,6 +9,7 @@ import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism';
 import { remarkReadingTime } from './remark-reading-time.js';
 
+// https://astro.build/config
 export default defineConfig({
     site: 'https://ostafinski.cc',
     markdown: {
@@ -17,7 +17,7 @@ export default defineConfig({
         shikiConfig: {
             themes: {
                 light: 'vitesse-dark',
-                dark: "vitesse-dark",
+                dark: 'vitesse-dark',
             },
             langs: [
                 'js',
@@ -31,15 +31,15 @@ export default defineConfig({
             wrap: true,
             transformers: [],
         },
-        rehypePlugins: [
-            rehypeSlug,
-            rehypeAutoLinkHeadings,
-            rehypeCodeTitles,
-        ],
+        rehypePlugins: [rehypeSlug, rehypeAutoLinkHeadings, rehypeCodeTitles],
         remarkPlugins: [remarkReadingTime],
     },
     integrations: [
-        tailwind({ config: { applyBaseStyles: false } }),
+        tailwind({
+            config: {
+                applyBaseStyles: false,
+            },
+        }),
         mdx(),
         sitemap(),
         compress(),

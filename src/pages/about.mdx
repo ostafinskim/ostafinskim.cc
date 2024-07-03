@@ -2,10 +2,12 @@
 layout: layouts/About.astro
 title: About Me
 ---
+import { Image } from 'astro:assets';
+import photo from '../assets/images/photo.jpg';
 
 # About Me
 
-![Miro Ostafinski](/images/photo.jpg)
+<Image src={photo} alt="Miro Ostafinski" />
 
 I'm a software engineer with a passion for building things that live on the internet.
 
