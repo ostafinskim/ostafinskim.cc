@@ -3,12 +3,13 @@ import { format, parse } from 'date-fns'
 import { Image } from 'astro:assets';
 import photo from '../assets/images/photo.jpg';
 import Layout from "layouts/Layout.astro";
-
-const { timeToRead, frontmatter: {title, pubDate } } = Astro.props;
+import TableOfContents from "components/TableOfContents.astro";
+const { headings, timeToRead, frontmatter: {title, pubDate } } = Astro.props;
 const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy');
 ---
 
 <Layout title={title} canonical={title}>
+
 	<article class="my-6" item-prop="blogPost" item-scope item-type="https://schema.org/BlogPosting">
 		<h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 " item-prop="name headline">
 			{title}
@@ -25,19 +26,32 @@ const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'MMMM d, yy
 					</span>
 					&nbsp;at&nbsp;
 					<time item-prop="datePublished" date-time={publishDate}>
-						{publishDate}
+						🗓️ {publishDate}
 					</time>
 				</div>
 				<div class="text-slate-500">
 					<span class="inline-block mx-2" role="separator">
-						&bull;
+						⏳
 					</span>
 					{timeToRead}
 				</div>
 			</div>
 		</header>
-		<section class="prose dark:prose-dark w-full mb-6 mx-auto" tabindex="-1" item-prop="articleBody">
-			<slot />
-		</section>
+		<div class="grid grid-cols-1 md:grid-cols-[25%_60ch] gap-10 mt-8">
+
+			<aside class='md:flex flex-col gap-6'>
+				<div class='sticky top-8 self-start transition-all duration-200'>
+					{headings && headings.length > 0 && <TableOfContents {headings} />}
+				</div>
+			</aside>
+
+			<section class="prose dark:prose-dark w-full mb-6 mx-auto" tabindex="-1" item-prop="articleBody">
+				<slot />
+			</section>
+
+		</div>
+
+
+
 	</article>
 </Layout>
