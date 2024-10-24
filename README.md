@@ -1,42 +1,21 @@
-# Astro Starter Kit: Basics
+# Miroslaw Ostafinski - Portfolio & Blog
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Miroslaw Ostafinski Portfolio & Blog](/public/images/screenshot.png)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Overview
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+This is my personal portfolio and blog site. It is built with [Astro](https://astro.build) and hosted on [Netlify](https://netlify.com).
 
-## 🚀 Project Structure
+I build this project to learn Astro and to have a place to share my thoughts and projects.
 
-Inside of your Astro project, you'll see the following folders and files:
+I'm planning to write about web development, software engineering, and other topics that interest me.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+I'm also planning to share some of my projects and experiments.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+I hope you will find something interesting here.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
+## 🚀 Quick start
 
 All commands are run from the root of the project, from a terminal:
 
@@ -49,6 +28,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## License
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is open source and available under the [MIT License](LICENSE).
