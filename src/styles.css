@@ -43,6 +43,14 @@ img {
 	content-visibility: auto;
 }
 
+.dark a.link {
+	color: #FFCC14;
+}
+
+.light a.link {
+	color: #4F46E5;
+}
+
 .preload-transitions * {
 	transition: none !important;
 }
