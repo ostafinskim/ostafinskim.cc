@@ -10,7 +10,7 @@ tags: ["javascript", "web-components"]
 author: "Miro Ostafinski"
 ---
 
-**If you know HTML and a bit of JavaScript, you already know enough to write your first Web Component.**
+## If you know HTML and a bit of JavaScript, you already know enough to write your first Web Component
 
 Web Components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Web Components are based on existing web standards and are supported by all modern browsers.
 

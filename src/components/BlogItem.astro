@@ -11,14 +11,14 @@ const descriptionEllipsis = description.split(' ').slice(0, 25).join(' ');
 
 ---
 
-<article class='relative'>
+<article class='relative my-8 p-8 sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl'>
 	<div class='flex flex-col sm:flex-row justify-between mb-2'>
-		<h3
-			class='flex mb-1 sm:mb-0 text-lg sm:text-xl font-bold w-full text-slate-900 dark:text-slate-100'
+		<h2
+			class='flex mb-1 sm:mb-0 text-lg sm:text-xl font-bold w-full text-[#252525] dark:text-[#fcfcfc]'
 		>
 			<a
 				href={url}
-				class='block-link transition-opacity opacity-80 hover:opacity-100'
+				class='block-link'
 			>
 				{
 					lang && (
@@ -30,15 +30,16 @@ const descriptionEllipsis = description.split(' ').slice(0, 25).join(' ');
 				{title}
 				<svg
 					aria-hidden='true'
+					focusable='false'
 					class='ml-2 w-4 h-4 inline align-baseline'
 				>
 					<use xlink:href='#external-link-icon'></use>
 				</svg>
 			</a>
-		</h3>
+		</h2>
 	</div>
-	<p class='text-slate-600 dark:text-slate-400 max-w-2xl'>
+	<p class=' text-[#252525] dark:text-[#fcfcfc] max-w-2xl'>
 		{descriptionEllipsis}
-		<a href={url} class="inline-block font-semibold mt-2 hover:text-slate-800"> [more here] ⤵</a>
+		<a href={url} class="block py-4 font-semibold mt-2 hover:text-[#252525] dark:text-[#fcfcfc]"> [more here] ⤵</a>
 	</p>
 </article>

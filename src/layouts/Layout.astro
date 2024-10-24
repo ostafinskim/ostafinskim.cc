@@ -61,19 +61,19 @@ const SOCIAL_LINK = [
 		<link href='/manifest.json' rel='manifest' />
 		<meta
 			name='theme-color'
-			content='#fff'
+			content='#fcfcfc'
 			media='(prefers-color-scheme: light)'
 		/>
 		<meta
 			name='theme-color'
-			content='#000'
+			content='#252525'
 			media='(prefers-color-scheme: dark)'
 		/>
 		<ThemeProvider />
 	</head>
 
 	<body
-		class={`preload-transitions bg-white text-slate-800 dark:text-slate-200 dark:bg-neutral-900 min-w-[20rem]
+		class={`preload-transitions bg-white text-[#252525] dark:text-[#fcfcfc] dark:bg-[#252525] min-w-[20rem]
 	antialiased${isHome ? ' flex items-center' : ''}`}
 	>
 		<div
@@ -118,7 +118,7 @@ const SOCIAL_LINK = [
 							<li class='mr-4 mt-2'>
 								<a
 									href={href}
-									class='link-emoji relative inline-block text-slate-500 dark:text-slate-300 transition-colors duration-200 border-b dark:border-slate-700'
+									class='link-emoji relative inline-block transition-all duration-200 border-b border-[#252525] dark:border-[#fcfcfc]'
 								>
 									{label}
 								</a>
@@ -126,7 +126,7 @@ const SOCIAL_LINK = [
 						))
 					}
 				</ul>
-				<span class="font-semibold">#never_surrender ✊🏻</span>
+				<span class='font-semibold'>#never_surrender ✊🏻</span>
 			</footer>
 		</div>
 		<script is:inline>

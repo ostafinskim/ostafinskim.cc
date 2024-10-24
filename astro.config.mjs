@@ -16,8 +16,8 @@ export default defineConfig({
         syntaxHighlight: 'shiki',
         shikiConfig: {
             themes: {
-                light: 'vitesse-dark',
-                dark: 'vitesse-dark',
+                light: 'night-owl',
+                dark: 'night-owl',
             },
             langs: [
                 'js',

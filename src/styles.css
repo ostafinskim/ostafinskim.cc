@@ -7,7 +7,8 @@
 }
 
 ::selection {
-	@apply bg-cyan-400 bg-opacity-50 text-white;
+	background-color: #4F46E5;
+	color: white;
 }
 
 html {
@@ -16,7 +17,9 @@ html {
 
 html,
 body {
+	--off-black: #252525;
 	@apply h-full;
+	color: var(--off-black);
 }
 
 body {
@@ -29,8 +32,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 	@apply text-slate-900 dark:text-slate-100;
+	--off-black: #252525;
+	color: var(--off-black);
 }
 
 img {
@@ -118,112 +124,31 @@ img {
 	content: '';
 }
 
-.prose h1 {
-	@apply text-4xl font-bold sm:text-5xl;
-}
-
-.prose h2 {
-	@apply text-2xl sm:text-3xl;
-}
-
-.prose .project a {
-	@apply inline-block font-bold text-slate-800 no-underline dark:text-slate-200;
-}
-.prose .project a:hover {
-	@apply dark:text-slate-200;
-}
-
-.prose .project h3 {
-	@apply m-0 mb-2 text-xl no-underline sm:text-2xl;
-}
-
-.prose .anchor {
-	@apply invisible ml-1 align-middle no-underline;
-	color: inherit;
-	font-size: 0.8em;
-}
-
-.prose *:hover > a {
-	@apply visible;
-}
-.prose :where(strong):not(:where([class~='not-prose'] *)) {
-	@apply text-inherit;
-}
 
 
-.token.comment {
-	@apply text-slate-400;
-}
-
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	@apply text-slate-700 dark:text-slate-300;
-}
-
-.token.punctuation {
-	@apply text-slate-700 dark:text-slate-300;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	@apply text-teal-600 dark:text-teal-300;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	@apply text-sky-700 dark:text-sky-300;
-}
-
-.language-css .token.string,
-.style .token.string,
-.token.entity,
-.token.url,
-.token.regex,
-.token.important,
-.token.variable,
-.token.parameter {
-	@apply text-yellow-600 dark:text-yellow-400;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-	@apply text-blue-500 dark:text-blue-300;
-}
-
-.token.function,
-.token.class-name {
-	@apply text-pink-500 dark:text-pink-400;
-}
 
 @keyframes slide {
 	to {
 		background-position: 200% center;
 	}
 }
-
-@media (prefers-color-scheme: dark) {
-    .dark\:prose-dark :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
-	.dark\:prose-dark :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-		background-color: transparent !important;
-		color: #ec1d58 !important;
-	}
+.prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *))
+.dark\:prose-dark :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+	background-color: transparent !important;
 }
 
-@media (prefers-color-scheme: light) {
-    .dark\:prose-dark :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)),
-	.dark\:prose-dark :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-		background-color: transparent !important;
-		color: #ec1d58 !important;
-	}
+.dark\:prose-dark :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+	background-color: transparent !important;
+}
+
+.prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+.dark\:prose-dark:is(.dark *) :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)),
+.dark\:prose-dark:is(.dark *) :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+	color: #FFCC14 !important;
+	font-style: italic;
+}
+
+.light strong,
+.light code {
+	color: #4F46E5 !important;
 }
