@@ -12,16 +12,19 @@ type Heading = {
 export interface Props {
 	heading: Heading;
 }
+
+const words = heading.text.split(' ');
+const text = words.length > 5 ? words.slice(0, 5).join(' ') + '...' : heading.text;
 ---
 
 <li class='flex flex-col'>
 	<a
 		href={'#' + heading.slug}
 		class={cn(
-			` hover:bg-indigo-600 hover:text-white dark:text-white dark:hover:bg-indigo-600 text-sm md:text-xs py-1 px-4 rounded-3xl mb-2 first-letter:uppercase w-fit line-clamp-2`
+			` hover:bg-indigo-600 hover:text-white dark:text-white dark:hover:bg-indigo-600 text-md md:text-xs py-1 px-4 rounded-3xl mb-2 first-letter:uppercase w-fit line-clamp-2`
 		)}
 	>
-		&bull; {heading.text}
+		– {text}
 	</a>
 	{
 		heading.subheadings.length > 0 && (

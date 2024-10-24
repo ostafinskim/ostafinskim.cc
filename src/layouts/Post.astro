@@ -5,7 +5,7 @@ import photo from '../assets/images/photo.jpg';
 import Layout from "layouts/Layout.astro";
 import TableOfContents from "components/TableOfContents.astro";
 const { headings, timeToRead, frontmatter: {title, pubDate } } = Astro.props;
-const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'MMMM d, yyyy');
+const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'dd-MM-yyyy');
 ---
 
 <Layout title={title} canonical={title}>
@@ -19,17 +19,17 @@ const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'MMMM d, yy
 				class="bg-slate-200 w-8 h-8 sm:w-6 sm:h-6 mr-4 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-slate-200 dark:ring-slate-800">
 				<Image src={photo} alt="Miro Ostafinski" />
 			</figure>
-			<div class="flex flex-col sm:flex-row sm:justify-between sm:w-full text-sm">
+			<div class="w-full flex flex-col md:flex-row text-sm">
 				<div class="text-[#252525] dark:text-[#fcfcfc]">
 					<span item-prop="author" item-scope item-type="https://schema.org/Person">
 						<span item-prop="name">Miro Ostafinski</span>
 					</span>
-					&nbsp;at&nbsp;
 					<time item-prop="datePublished" date-time={publishDate}>
-						🗓️ {publishDate}
+					&nbsp;at&nbsp;
+					🗓️ {publishDate}
 					</time>
 				</div>
-				<div class="text-[#252525] dark:text-[#fcfcfc]">
+				<div class="md:ml-auto text-[#252525] dark:text-[#fcfcfc]">
 					<span class="inline-block mx-2" role="separator">
 						⏳
 					</span>
