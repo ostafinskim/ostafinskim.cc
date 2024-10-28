@@ -56,6 +56,7 @@ const SOCIAL_LINK = [
 		<meta name='twitter:site' content='@ostafinskim' />
 		<meta name='twitter:card' content='summary_large_image' />
 		<meta name='author' content='Miro Ostafinski' />
+		<link rel="shortcut icon" type="image/x-icon" href="https://cdn.buymeacoffee.com/uploads/profile_pictures/2024/06/ufwe1ORpgpcheorx.png@1f.png" >
 		<link href={canonical} rel='canonical' />
 		{date && <meta property='article:published_time' content={date} />}
 		<link href='/manifest.json' rel='manifest' />
@@ -87,18 +88,27 @@ const SOCIAL_LINK = [
 				</a>
 				<nav class='text-sm sm:text-base'>
 					<ul class='flex w-full gap-4'>
-						<li class='nav-link'>
-							<ActiveLink href='/blog'>Blog</ActiveLink>
-						</li>
-						<li class='nav-link'>
-							<ActiveLink href='/about'>About</ActiveLink>
-						</li>
 						{
 							!isHome && (
 								<li class='nav-link'>
 									<ActiveLink href='/'>Home</ActiveLink>
 								</li>
 							)
+						}
+						<li class='nav-link'>
+							<ActiveLink href='/about'>About</ActiveLink>
+						</li>
+						<li class='nav-link'>
+							<ActiveLink href='/blog'>Blog</ActiveLink>
+						</li>
+						{
+							SOCIAL_LINK.map(([label, href]) => (
+								<li class='nav-link'>
+									<ActiveLink href={href ?? '#'}>
+										{label}
+									</ActiveLink>
+								</li>
+							))
 						}
 						<li class='nav-link align-baseline ml-auto mr-6'>
 							<ToggleTheme />
@@ -110,22 +120,20 @@ const SOCIAL_LINK = [
 				<slot />
 			</main>
 			<footer
-				class='flex mb-4 text-sm sm:text-base flex-col justify-between sm:flex-row sm:items-end'
+				class='flex mb-4 text-sm sm:text-base flex-col items-center justify-between sm:flex-row'
 			>
-				<ul class='flex flex-wrap flex-shrink-0 max-w-full mr-6'>
-					{
-						SOCIAL_LINK.map(([label, href]) => (
-							<li class='mr-4 mt-2'>
-								<a
-									href={href}
-									class='link-emoji relative inline-block transition-all duration-200 border-b border-[#252525] dark:border-[#fcfcfc]'
-								>
-									{label}
-								</a>
-							</li>
-						))
-					}
-				</ul>
+				<script
+					type='text/javascript'
+					src='https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js'
+					data-color='transparent'
+					data-name='bmc-button'
+					data-slug='ostafinskim'
+					data-emoji='☕'
+					data-font='Cookie'
+					data-text='Buy me a coffee'
+					data-outline-color='#fcfcfc'
+					data-font-color='#fcfcfc'
+					data-coffee-color='#fcfcfc'></script>
 				<span class='font-semibold'>#never_surrender ✊🏻</span>
 			</footer>
 		</div>

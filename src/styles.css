@@ -42,6 +42,13 @@ p {
 img {
 	content-visibility: auto;
 }
+.dark .bmc-btn {
+	color: #fcfcfc;
+}
+
+.light .bmc-btn {
+	color: #252525;
+}
 
 .dark a.link {
 	color: #FFCC14;
