@@ -8,22 +8,29 @@ const allPosts = await getCollection('blog');
 ---
 
 <Layout title={pageTitle}>
-	<h1 class="title relative inline-flex flex-col-reverse sm:flex-row mb-3">
-		<div class="relative inline-block text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight">
-			<span class="title-gradient">Blog</span>
-			<span class="title-cover absolute inset-0 transition-opacity duration-500 print:hidden" aria-hidden="true">
+	<h1 class='title relative inline-flex flex-col-reverse sm:flex-row mb-3'>
+		<div
+			class='relative inline-block text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight'
+		>
+			<span class='title-gradient'>Blog</span>
+			<span
+				class='title-cover absolute inset-0 transition-opacity duration-500 print:hidden'
+				aria-hidden='true'
+			>
 				Blog
 			</span>
 		</div>
 	</h1>
-	<ul>
+	<ul class='grid grid-cols-1 md:grid-cols-2 gap-4'>
 		{
 			allPosts.map((post) => (
-				<BlogItem
-					url={`/blog/${post.slug}/`}
-					title={post.data.title}
-					{...post}
-				/>
+				<li>
+					<BlogItem
+						url={`/blog/${post.slug}/`}
+						title={post.data.title}
+						{...post}
+					/>
+				</li>
 			))
 		}
 	</ul>

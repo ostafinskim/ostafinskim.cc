@@ -41,6 +41,7 @@ p {
 
 img {
 	content-visibility: auto;
+	border-radius: 12px;
 }
 .dark .bmc-btn {
 	color: #fcfcfc;

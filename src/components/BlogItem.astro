@@ -11,7 +11,7 @@ const descriptionEllipsis = description.split(' ').slice(0, 25).join(' ');
 
 ---
 
-<article class='relative my-8 sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl'>
+<article class='relative p-4 dark:bg-[#323232] bg-[#F9F9F9] rounded-xl'>
 	<div class='flex flex-col sm:flex-row justify-between mb-2'>
 		<h2
 			class='flex mb-1 sm:mb-0 text-lg sm:text-xl font-bold w-full text-[#252525] dark:text-[#fcfcfc]'
@@ -40,6 +40,6 @@ const descriptionEllipsis = description.split(' ').slice(0, 25).join(' ');
 	</div>
 	<p class=' text-[#252525] dark:text-[#fcfcfc] max-w-2xl'>
 		{descriptionEllipsis}
-		<a href={url} class="block py-4 font-semibold mt-2 hover:text-[#252525] dark:text-[#fcfcfc]"> [more here] ⤵</a>
+		<a href={url} class="block text-end py-4 font-semibold mt-2 hover:text-[#252525] dark:text-[#fcfcfc]"> [more here] ⤵</a>
 	</p>
 </article>
