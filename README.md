@@ -1,7 +1,7 @@
 # Miroslaw Ostafinski - Portfolio & Blog
 
 ![Miroslaw Ostafinski Portfolio & Blog](/public/images/screenshot.png)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/421d0189-e881-4e30-8552-ed4ff74cf2b7/deploy-status)](https://app.netlify.com/sites/storied-otter-dadb82/deploys)
 
 ## Overview
 
@@ -30,4 +30,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [MIT License](LICENSE.md).
