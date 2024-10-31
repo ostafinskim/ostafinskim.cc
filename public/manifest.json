@@ -2,8 +2,10 @@
   "name": "Miro Ostafinski",
   "short_name": "Miro Ostafinski",
   "icons": [
-    { "src": "/touch-192x192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/touch-512x512.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "/touch-60x60.png", "type": "image/png", "sizes": "60x60" },
+    { "src": "/touch-76x76.png", "type": "image/png", "sizes": "76x76" },
+    { "src": "/touch-120x120.png", "type": "image/png", "sizes": "120x120" },
+    { "src": "/touch-152x152.png", "type": "image/png", "sizes": "152x152" }
   ],
   "background_color": "#fff6ac",
   "theme_color": "#ce6fea",
