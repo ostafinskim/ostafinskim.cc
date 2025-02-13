@@ -20,7 +20,6 @@ import MoonIcon from './ui/MoonIcon.astro';
 								theme: isPressed ? 'light' : 'dark',
 							},
 						});
-						// dispatch event -> ThemeProvider.astro
 						document.dispatchEvent(themeChangeEvent);
 						button.setAttribute('aria-pressed', String(!isPressed));
 					}
@@ -36,15 +35,10 @@ import MoonIcon from './ui/MoonIcon.astro';
 
 <theme-toggle class='relative h-6 w-6'>
 	<button id='toggle-theme' class='group' aria-label='Toggle Theme'>
-		<span
-			class='absolute left-0 right-0 top-0 opacity-0 group-aria-pressed:opacity-100'
-		>
+		<span class='absolute left-0 right-0 top-0 opacity-0 group-aria-pressed:opacity-100'>
 			<SunIcon />
 		</span>
-
-		<span
-			class='absolute left-0 right-0 top-0 opacity-0 group-aria-[pressed=false]:opacity-100'
-		>
+		<span class='absolute left-0 right-0 top-0 opacity-0 group-aria-[pressed=false]:opacity-100'>
 			<MoonIcon />
 		</span>
 	</button>

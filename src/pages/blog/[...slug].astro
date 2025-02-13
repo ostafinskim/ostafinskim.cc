@@ -1,19 +1,23 @@
 ---
-import {getCollection} from 'astro:content';
-import Layout from '../../layouts/Post.astro';
+import {getCollection} from 'astro:content'
+import Layout from '../../layouts/Post.astro'
 
 export async function getStaticPaths() {
-	const blogEntries = await getCollection('blog');
+	const blogEntries = await getCollection('blog')
 	return blogEntries.map((entry) => ({
 		params: {slug: entry.slug},
 		props: {entry},
-	}));
+	}))
 }
 
-const {entry} = Astro.props;
-const {Content, headings, remarkPluginFrontmatter} = await entry.render();
+const {entry} = Astro.props
+const {Content, headings, remarkPluginFrontmatter} = await entry.render()
 ---
 
-<Layout frontmatter={entry.data} headings={headings} timeToRead={remarkPluginFrontmatter.minutesRead} >
+<Layout
+	frontmatter={entry.data}
+	headings={headings}
+	timeToRead={remarkPluginFrontmatter.minutesRead}
+>
 	<Content />
 </Layout>

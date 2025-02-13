@@ -4,7 +4,6 @@
  */
 
 const cardsArray = document.querySelectorAll('[data-component="card"]');
-
 if (cardsArray.length) {
     // Loop through cards adding a click event and identifying the main link
     cardsArray.forEach((card) => {

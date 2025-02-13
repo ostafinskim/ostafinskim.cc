@@ -2,33 +2,65 @@
 layout: layouts/About.astro
 title: About Me
 ---
+
 import { Image } from 'astro:assets';
 import photo from '../assets/images/photo.jpg';
 
-# About Me
+<h1 class='text-[length:var(--step-4)] title relative inline-flex flex-col-reverse sm:flex-row mb-3'>
+	<div class='relative inline-block font-bold tracking-tight'>
+		<span class='title-gradient'>About</span>
+		<span class='title-cover absolute inset-0 transition-opacity duration-500 print:hidden' aria-hidden='true'>About</span>
+	</div>
+</h1>
 
-<Image src={photo} alt="Miro Ostafinski" />
+<Image
+    src={photo}
+    alt="Miro Ostafinski"
+    width={600}
+    format="webp"
+    loading="eager"
+    decoding="async"
+    class="mb-8"
+/>
 
-I'm a software engineer with a passion for building things that live on the internet.
+## 👋🏼 Hi there! 
 
-I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.
+I'm Miro Ostafinski, a JavaScript engineer with three years of experience building user-friendly web applications.
 
-I'm a self-taught developer who loves to learn new things and solve problems. I'm always looking for opportunities to work on exciting projects with people who are passionate about their work.
+I specialize in React, TypeScript, and Node.js, with a strong focus on accessibility (a11y), performance, and clean code.
 
-I'm currently working as a web developer at <a href="https://studio24.net" class="link">Studio24</a>, where I'm responsible for developing and maintaining clients websites and web apps.
+## 🚀 What I Do
 
-## Skills
+Since July 2022, I've been working at <a href="https://studio24.net" class="link">Studio 24 Ltd</a>, where I develop high-quality digital experiences for diverse clients. 
 
-- **Languages**: TypeScript, JavaScript, PHP
-- **Frontend**: Web Components, React, Next.js, Tailwind, Astro & more
-- **Backend**: Node.js, Express, Laravel,
-- **Databases**: MongoDB, PostgreSQL, MySQL
-- **Cloud**: AWS, Google Cloud, Netlify, Vercel
-- **CMS**: WordPress,
+My work involves frontend and backend development, ensuring accessible, performant, and maintainable applications.
 
+Before that, I completed a five-month full-stack internship at intive, gaining hands-on experience with Express.js, Node.js, React, and TypeScript.
+
+## 🛠 Tech Stack & Skills
+
+- **Frontend**: React, Next.js, TypeScript, JavaScript, Tailwind CSS, SCSS
+- **Backend**: Node.js, Express.js, Laravel, PHP
+- **Databases**: PostgreSQL, MySQL, MongoDB
+- **CMS**: WordPress, Craft CMS
+- **Tools & Practices**: Git, CI/CD, Vite, Webpack, Jest, WCAG compliance
+
+## 🎯 Focus Areas
+
+- Building modern, scalable web applications
+- Enhancing performance & accessibility for inclusive user experiences
+- Collaborating with developers & designers to craft intuitive interfaces
+
+## 📬 Let's Connect!
+
+I'm always open to discussions, collaborations, and new opportunities. If you'd like to chat or work on a project together, feel free to reach out!
+
+<div class="flex gap-4 mt-6">
+    <a href="https://linkedin.com/in/ostafinskim" class="link">🔗 LinkedIn</a>
+    <a href="https://github.com/ostafinskim" class="link">🔗 Github</a>
+    <a href="mailto:ostafinskim@email.com" class="link">📫 Email</a>
+</div>
 
 ## Projects
 
-<div class="grid gap-6 sm:grid-cols-2">
-    🚧 UNDER CONSTRUCTION 🚧
-</div>
+<div class="grid gap-6 sm:grid-cols-2">🚧 UNDER CONSTRUCTION 🚧</div>

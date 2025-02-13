@@ -1,15 +1,13 @@
 ---
 export type Props = {
-	href: string
-}
+	href: string;
+};
 
-const { href } = Astro.props
-const { pathname } = Astro.url
-const isActive = href !== '/' && pathname.startsWith(href)
+const {href} = Astro.props;
+const {pathname} = Astro.url;
+const isActive = href !== '/' && pathname.startsWith(href);
 ---
 
-<a href={href} class={`inline-block ${ isActive ? 'text-[#252525] dark:text-[#fcfcfc]  font-bold'
-	: 'text-[#252525] dark:text-[#fcfcfc] transition-colors duration-200 border-b dark:border-[#fcfcfc] hover:text-[#4F46E5]'
-	}`}>
+<a href={href} class={`dark:text-white dark:hover:text-[#ff1a81] inline-block ${isActive ? 'font-bold' : ''}`}>
 	<slot />
 </a>

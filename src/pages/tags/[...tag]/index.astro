@@ -25,15 +25,18 @@ const {posts} = Astro.props;
 ---
 
 <Layout title={tag}>
-	<p>Posts tagged with # {tag}</p>
-	<ul>
+	<h1 class="text-[length:var(--step-0)]">Posts tagged with # {tag}</h1>
+	<ul class="grid grid-cols-[repeat(auto-fit,_minmax(0,_35ch))] gap-4 mt-8">
 		{
 			posts.map((post) => (
-				<BlogItem
-					url={`/blog/${post.slug}/`}
-					title={post.data.title}
-					{...post}
-				/>
+				<li>
+					<BlogItem
+						url={`/blog/${post.slug}/`}
+						title={post.data.title}
+						{...post}
+					/>
+				</li>
+
 			))
 		}
 	</ul>

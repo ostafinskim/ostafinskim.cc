@@ -17,12 +17,12 @@ const tags = await getTags();
 ---
 
 <Layout title='Tags'>
-	<div class='flex justify-center flex-wrap gap-4'>
+	<div class='grid grid-cols-[repeat(auto-fit,_minmax(0,_35ch))] gap-4 mt-8'>
 		{
 			tags.map((tag) => (
 				<a
 					href={`/tags/${tag}`}
-					class='inline-block bg-gray-200  rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'
+					class='inline-block bg-[#9a47f3] text-white rounded-full px-4 py-2 font-medium transition-colors duration-200'
 				>
 					#{tag}
 				</a>

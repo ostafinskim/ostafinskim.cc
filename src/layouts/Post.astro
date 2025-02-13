@@ -1,57 +1,47 @@
 ---
-import { format, parse } from 'date-fns'
-import { Image } from 'astro:assets';
-import photo from '../assets/images/photo.jpg';
-import Layout from "layouts/Layout.astro";
-import TableOfContents from "components/TableOfContents.astro";
-const { headings, timeToRead, frontmatter: {title, pubDate } } = Astro.props;
-const publishDate = format(parse(pubDate, 'yyyy-MM-dd', new Date()), 'dd-MM-yyyy');
+import {format, parse} from 'date-fns'
+import {Image} from 'astro:assets'
+import photo from '../assets/images/photo.jpg'
+import Layout from 'layouts/Layout.astro'
+import TableOfContents from 'components/TableOfContents.astro'
+const { headings, timeToRead, frontmatter: {title, pubDate, image}} = Astro.props
+const publishDate = format( parse(pubDate, 'yyyy-MM-dd', new Date()), 'dd-MM-yyyy' )
 ---
 
 <Layout title={title} canonical={title}>
-
-	<article class="my-6" item-prop="blogPost" item-scope item-type="https://schema.org/BlogPosting">
-		<h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 " item-prop="name headline">
-			{title}
-		</h1>
+	<article class='my-6' item-prop='blogPost' item-scope item-type='https://schema.org/BlogPosting'>
+		<h1 class='text-[length:var(--step-2)] font-bold tracking-tight mb-6' item-prop='name headline'>{title}</h1>
 		<header class="flex items-center mb-8 sm:mb-10">
-			<figure
-				class="bg-slate-200 w-8 h-8 sm:w-6 sm:h-6 mr-4 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-slate-200 dark:ring-slate-800">
+
+			<figure class="w-12 h-full mr-4 overflow-hidden">
 				<Image src={photo} alt="Miro Ostafinski" />
 			</figure>
-			<div class="w-full flex flex-col md:flex-row text-sm">
-				<div class="text-[#252525] dark:text-[#fcfcfc]">
-					<span item-prop="author" item-scope item-type="https://schema.org/Person">
-						<span item-prop="name">Miro Ostafinski</span>
+
+			<div class='w-full flex flex-col md:flex-row text-sm'>
+				<div>
+					<span item-prop='author' item-scope item-type='https://schema.org/Person'>
+						<span item-prop='name'>Miro Ostafinski</span>
 					</span>
-					<time item-prop="datePublished" date-time={publishDate}>
-					&nbsp;at&nbsp;
-					🗓️ {publishDate}
+					<time item-prop='datePublished' date-time={publishDate}>
+						&nbsp;at&nbsp; 🗓️ {publishDate}
 					</time>
 				</div>
-				<div class="md:ml-auto text-[#252525] dark:text-[#fcfcfc]">
-					<span class="inline-block mx-2" role="separator">
-						⏳
-					</span>
+				<div class='md:ml-auto'>
+					<span class='inline-block mx-2' role='separator'> ⏳ </span>
 					{timeToRead}
 				</div>
 			</div>
 		</header>
-		<div class="grid grid-cols-1 md:grid-cols-[25%_60ch] gap-10 mt-8">
-
+		<div class='grid lg:grid-cols-[320px,_1fr] gap-10 mt-8'>
 			<aside class='md:flex flex-col gap-6'>
 				<div class='sticky top-8 self-start transition-all duration-200'>
-					{headings && headings.length > 0 && <TableOfContents {headings} />}
+					{ headings && headings.length > 0 && ( <TableOfContents {headings} /> ) }
 				</div>
 			</aside>
-
-			<section class="prose dark:prose-dark w-full mb-6 mx-auto" tabindex="-1" item-prop="articleBody">
+			<section class='prose dark:prose-dark w-full mb-6' tabindex='-1' item-prop='articleBody'>
+				<Image src={image} alt="" height="300" width="800" />
 				<slot />
 			</section>
-
 		</div>
-
-
-
 	</article>
 </Layout>

@@ -3,9 +3,7 @@ title: Intro to the Web Components
 pubDate: "2024-06-01"
 description: "Learn how to create your first vanilla JavaScript web component."
 lang: en
-image:
-  url: /images/photo.jpg
-  alt: "Test photo"
+image: ./web-component.webp
 tags: ["javascript", "web-components"]
 author: "Miro Ostafinski"
 ---
@@ -20,15 +18,15 @@ In this article, you will learn how to create your first Web Component using van
 
 Web Components consist of three main technologies:
 
-1. **Custom Elements**: A way to define your own HTML elements.
-2. **Shadow DOM**: A way to encapsulate the style and markup of a component.
-3. **HTML Templates**: A way to define reusable markup fragments.
+1. **_Custom Elements_**: A way to define your own HTML elements.
+2. **_Shadow DOM_**: A way to encapsulate the style and markup of a component.
+3. **_HTML Templates_**: A way to define reusable markup fragments.
 
 ## Creating a Web Component
 
 Let's create a simple Web Component that displays a custom greeting message.
 
-1. Create a new file called `greeting.js` and add the following code:
+– Create a new file called **_greeting.js_** and add the following code:
 
 ```javascript
 
@@ -51,7 +49,7 @@ class Greeting extends HTMLElement {
 customElements.define('x-greeting', Greeting);
 ```
 
-2. Create an HTML file called `index.html` and add the following code:
+– Create an HTML file called **_index.html_** and add the following code:
 
 ```html
 <!DOCTYPE html>
@@ -68,9 +66,9 @@ customElements.define('x-greeting', Greeting);
 </html>
 ```
 
-3. Open the `index.html` file in your browser. You should see the custom greeting message displayed on the page.
+– Open the **_index.html_** file in your browser. You should see the custom greeting message displayed on the page.
 
-In this example, we created a custom element called `x-greeting` that displays a greeting message. The `Greeting` class extends `HTMLElement` and defines the behavior of the custom element. We use the `shadow` DOM to encapsulate the style and markup of the component. The `text` attribute allows us to customize the greeting message.
+In this example, we created a custom element called **_x-greeting_** that displays a greeting message. The **_Greeting_** class extends **_HTMLElement_** and defines the behavior of the custom element. We use the **_shadow_** DOM to encapsulate the style and markup of the component. The **_text_** attribute allows us to customize the greeting message.
 
 ## Conclusion
 

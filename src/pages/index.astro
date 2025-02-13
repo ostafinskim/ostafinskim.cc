@@ -1,36 +1,103 @@
 ---
-import Layout from "layouts/Layout.astro";
+import Layout from 'layouts/Layout.astro';
+import { Icon } from '@iconify/react';
 
 const title = 'Miro Ostafinski — Full Stack Web Developer';
+const featuredTechnologies = [
+  { 
+    name: 'TypeScript', 
+    icon: 'logos:typescript-icon',
+    color: '#3178C6'
+  },
+  {
+    name: 'JavaScript',
+    icon: 'logos:javascript',
+    color: '#ffc600'
+  },
+  { 
+    name: 'React', 
+    icon: 'logos:react',
+    color: '#61DAFB'
+  },
+  { 
+    name: 'Next.js', 
+    icon: 'logos:nextjs-icon',
+    color: '#1A1A1A'
+  },
+  { 
+    name: 'Node.js', 
+    icon: 'logos:nodejs-icon',
+    color: '#339933'
+  },
+  { 
+    name: 'Laravel', 
+    icon: 'logos:laravel',
+    color: '#FF2D20'
+  }
+];
 ---
-
 <Layout {title} overrideTitle>
-	<article class="my-auto pb-8">
-		<h1 class="title relative inline-flex flex-col-reverse sm:flex-row mb-3">
-			<div class="relative inline-block text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight">
-				<span class="title-gradient">Miro Ostafinski</span>
-				<span class="title-cover absolute inset-0 transition-opacity duration-500 print:hidden" aria-hidden="true">
-					Miro Ostafinski
-				</span>
-			</div>
-		</h1>
-		<p class="block text-md w-[80%] md:w-[85%] sm:text-xl font-medium sm:leading-relaxed text-[#252525]">
-			<span class="block">
-				💼 Web Developer at
-				<a class="border-b border-[#252525] dark:border-[#ffffff]" href="https://studio24.net">Studio24</a>
-			</span>{' '}
-			<span class="">
-				💻 I work with React and TypeScript, Node.js, Laravel and more.
-			</span>{' '}
-			<span class="block my-6 transition-color ">
-				<a href="/about#projects" class="border-b border-[#252525] dark:border-[#ffffff]">
-					See my work
-				</a>{' '}
-				or{' '}
-				<a href="/blog" class="border-b border-[#252525] dark:border-[#ffffff]">
-					read my blog
-				</a>{' '}
-			</span>
-		</p>
-	</article>
+  <article class='my-auto pb-8'>
+    <h1 class='title relative inline-flex flex-col-reverse sm:flex-row mb-3'>
+      <div class='relative inline-block font-bold tracking-tight'>
+        <span class='title-gradient'>Miro Ostafinski</span>
+        <span class='title-cover absolute inset-0 transition-opacity duration-500 print:hidden' aria-hidden='true'>
+          Miro Ostafinski
+        </span>
+      </div>
+    </h1>
+
+    <div class='space-y-8 w-[80%] md:w-[85%]'>
+      <!-- Krótkie wprowadzenie -->
+      <p class='font-medium sm:leading-relaxed'>
+        <span class='block mb-2'>
+          💼 Web Developer at
+          <a class='dark:text-white dark:hover:text-[#2dd2dd] border-b border-[#252525] dark:border-[#ffffff]' 
+             href='https://studio24.net'>
+            Studio24
+          </a>
+        </span>
+      </p>
+
+	  <div class='flex flex-wrap gap-3'>
+		{featuredTechnologies.map(tech => (
+		  <span class='px-3 py-1.5 bg-[#fcfcfc] dark:bg-slate-800 rounded-full text-sm flex items-center gap-2 hover:scale-105 transition-transform'>
+			  <Icon icon={tech.icon} client:visible width="20" height="20" />
+			{tech.name}
+		  </span>
+		))}
+	  </div>
+
+      <!-- <div class='space-y-4'>
+        <h2 class='text-lg font-semibold'>Recent Work</h2>
+        <div class='grid sm:grid-cols-2 gap-4'>
+          {recentProjects.map(project => (
+            <div class='p-4 rounded-lg bg-slate-50 dark:bg-slate-800/50'>
+              <h3 class='font-medium'>{project.name}</h3>
+              <p class='text-sm text-slate-600 dark:text-slate-300'>{project.description}</p>
+              <div class='mt-2 flex gap-2'>
+                {project.tech.map(t => (
+                  <span class='text-xs px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded'>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div> -->
+
+      <!-- CTA -->
+      <div class='flex gap-4'>
+        <a href='/about' 
+           class='dark:text-white dark:hover:text-[#2dd2dd] border-b border-[#252525] dark:border-[#ffffff]'>
+          More about me
+        </a>
+        <a href='/blog' 
+           class='dark:text-white dark:hover:text-[#2dd2dd] border-b border-[#252525] dark:border-[#ffffff]'>
+          Read my blog
+        </a>
+      </div>
+    </div>
+  </article>
 </Layout>
