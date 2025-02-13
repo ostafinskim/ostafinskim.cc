@@ -59,8 +59,6 @@ body {
 
 body {
     position: relative;
-    min-height: 100vh;
-    width: 100%;
     font-size: var(--step-0);
 }
 
@@ -131,6 +129,8 @@ img {
 
 .gradient-bg {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: -999;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
 }
