@@ -16,7 +16,7 @@ export default function Portfolio() {
       </div>
       <div id="isotope" className="mb-n100 mb-sm-n50">
         {portfolios2.map((item, index) => (
-          <PortfolioCard key={item.id} item={item} reverse={index % 2 === 1} />
+          <PortfolioCard key={item.slug} item={item} reverse={index % 2 === 1} />
         ))}
       </div>
     </div>

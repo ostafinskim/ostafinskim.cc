@@ -1,9 +1,9 @@
 import { portfolios2 } from "@/data/portfolio";
 import PortfolioCard from "@/components/portfolio/portfolio-card";
 
-export default function RelatedProject9({ currentId }) {
+export default function RelatedProject9({ currentSlug }) {
   // Show the project after the current one, wrapping to the first.
-  const currentIndex = portfolios2.findIndex((p) => p.id == currentId);
+  const currentIndex = portfolios2.findIndex((p) => p.slug === currentSlug);
   const nextItem = portfolios2[(currentIndex + 1) % portfolios2.length];
 
   return (

@@ -7,7 +7,7 @@ const defaultPhotos = [
 
 export const portfolios2 = [
 	{
-		id: 15,
+		slug: 'uk-parliament-website',
 		imageUrl: '/assets/images/gen/work-1.svg',
 		title: 'UK Parliament Website',
 		description:
@@ -18,7 +18,7 @@ export const portfolios2 = [
 		photos: defaultPhotos,
 	},
 	{
-		id: 16,
+		slug: 'fitzwilliam-museum',
 		imageUrl: '/assets/images/gen/work-2.svg',
 		title: 'The Fitzwilliam Museum',
 		description:
@@ -29,7 +29,7 @@ export const portfolios2 = [
 		photos: defaultPhotos,
 	},
 	{
-		id: 17,
+		slug: 'ecommerce-platform',
 		imageUrl: '/assets/images/gen/work-3.svg',
 		title: 'E-commerce Platform',
 		description:

@@ -17,7 +17,7 @@ export default function sitemap() {
   }));
 
   const work = portfolios2.map((item) => ({
-    url: `${BASE_URL}/work/${item.id}`,
+    url: `${BASE_URL}/work/${item.slug}`,
     changeFrequency: "yearly",
     priority: 0.6,
   }));

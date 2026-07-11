@@ -79,7 +79,7 @@ export default function WorkView({ item }) {
           <section
             className={`page-section ${dark ? "bg-dark-1 light-content" : ""}`}
           >
-            <RelatedProject9 currentId={item.id} />
+            <RelatedProject9 currentSlug={item.slug} />
           </section>
         </>
       )}

@@ -18,7 +18,7 @@ export default function PortfolioCard({ item, reverse = false }) {
           }`}
         >
           <div className="portfolio-2-image">
-            <Link href={`/work/${item.id}`}>
+            <Link href={`/work/${item.slug}`}>
               <Image
                 width={1200}
                 height={819}
@@ -31,11 +31,11 @@ export default function PortfolioCard({ item, reverse = false }) {
         <div className="col-md-4">
           <hr className="black thick mt-0 mb-20 d-none d-md-block" />
           <h3 className="portfolio-2-title font-alt mb-20">
-            <Link href={`/work/${item.id}`}>{item.title}</Link>
+            <Link href={`/work/${item.slug}`}>{item.title}</Link>
           </h3>
           <p className="portfolio-2-descr">{item.description}</p>
           <div>
-            <AnimatedLink href={`/work/${item.id}`}>View Project</AnimatedLink>
+            <AnimatedLink href={`/work/${item.slug}`}>View Project</AnimatedLink>
           </div>
         </div>
       </div>
