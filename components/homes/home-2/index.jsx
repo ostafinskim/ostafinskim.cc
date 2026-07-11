@@ -29,9 +29,9 @@ export default function Home2({ dark = false, posts = [] }) {
             <div className="col-md-5 order-last order-md-first">
               <div className="overflow-hidden">
                 <Image
-                  width={800}
-                  height={1095}
-                  src="/assets/images/gen/about.svg"
+                  width={1100}
+                  height={1652}
+                  src="/assets/images/miro.webp"
                   className="w-100 wow scaleOutIn"
                   alt={site.name}
                 />
