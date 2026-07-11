@@ -155,9 +155,15 @@ a.logo.logo-mark:hover,
   font-weight: 400 !important;
 }
 .footer-mark {
-  font-size: 2.25rem;
-  vertical-align: -0.175em;
-  margin-right: 0.35em;
+  display: block;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0.1em;
+}
+@media (min-width: 992px) {
+  .footer-mark {
+    font-size: 7rem;
+  }
 }
 .fw-social-inline-item .link-hover-anim {
   display: inline-flex;

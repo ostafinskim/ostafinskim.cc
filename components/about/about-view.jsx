@@ -20,7 +20,7 @@ export default function AboutView() {
           >
             <div className="container">
               <div className="row">
-                <div className="col-md-5 order-last order-md-first">
+                <div className="col-md-5 mb-sm-40">
                   <div className="overflow-hidden">
                     <Image
                       width={1100}
@@ -31,7 +31,7 @@ export default function AboutView() {
                     />
                   </div>
                 </div>
-                <div className="col-md-7 col-lg-6 offset-lg-1 d-flex align-items-center mb-sm-80">
+                <div className="col-md-7 col-lg-6 offset-lg-1 d-flex align-items-center mb-sm-70">
                   <div className="wow fadeInUp">
                     <OutlineTitle text="My Story" />
                     <p className="section-text mb-30">

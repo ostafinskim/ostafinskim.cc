@@ -20,6 +20,28 @@ img.w-100 {
   height: auto;
 }
 
+/* Mobile nav dropdown: the panel lives inside .full-wrapper (side margins),
+   so it floated 20px off each edge — pull it back out to full bleed. */
+.mobile-on .full-wrapper .desktop-nav {
+  left: calc(-1 * var(--full-wrapper-margin-x));
+  width: calc(100% + 2 * var(--full-wrapper-margin-x));
+}
+
+/* Mobile spacing rhythm: every section reads as 70px top / 70px bottom.
+   Kills the per-section stragglers (title mt-20, trailing hr/card margins)
+   that made gaps jump between 70 and 156px. */
+@media only screen and (max-width: 767px) {
+  .page-section .section-title-medium.mt-20 {
+    margin-top: 0 !important;
+  }
+  #experience .container > hr:last-of-type {
+    margin-bottom: 0 !important;
+  }
+  #blog .row > .post-prev-2:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
 /* highlight.js makes code.hljs its own scroll region (overflow-x: auto),
    which axe flags as an unfocusable scrollable region. Let the <pre>
    (tabindex="0") own the scrolling instead. */

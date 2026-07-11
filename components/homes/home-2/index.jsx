@@ -26,7 +26,7 @@ export default function Home2({ dark = false, posts = [] }) {
       <section className={`${sectionClass} pb-0`} id="about">
         <div className="container">
           <div className="row">
-            <div className="col-md-5 order-last order-md-first">
+            <div className="col-md-5 mb-sm-40">
               <div className="overflow-hidden">
                 <Image
                   width={1100}
@@ -37,7 +37,7 @@ export default function Home2({ dark = false, posts = [] }) {
                 />
               </div>
             </div>
-            <div className="col-md-7 col-lg-6 offset-lg-1 d-flex align-items-center mb-sm-80">
+            <div className="col-md-7 col-lg-6 offset-lg-1 d-flex align-items-center mb-sm-70">
               <div className="wow fadeInUp">
                 <OutlineTitle text="About" />
                 <p className="section-text mb-60 mb-md-40 mb-sm-30">
