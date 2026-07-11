@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="baseherosvg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0714b8"/>
+      <stop offset="0.38" stop-color="#073bff"/>
+      <stop offset="1" stop-color="#03106d"/>
+    </linearGradient>
+    <radialGradient id="edgeAherosvg" cx="92%" cy="18%" r="48%">
+      <animate attributeName="cx" dur="15.0s" values="92.0%;102.8%;92.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="14.1s" values="18.0%;44.7%;18.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="r" dur="21.9s" values="48.0%;49.3%;48.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#00e5ff" stop-opacity="0.95"/>
+      <stop offset="0.38" stop-color="#00e5ff" stop-opacity="0.48"/>
+      <stop offset="0.82" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="edgeBherosvg" cx="5%" cy="84%" r="52%">
+      <animate attributeName="cx" dur="13.4s" values="5.0%;-21.9%;5.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="13.4s" values="84.0%;65.3%;84.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="r" dur="15.8s" values="52.0%;43.9%;52.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#00e5ff" stop-opacity="0.82"/>
+      <stop offset="0.34" stop-color="#00e5ff" stop-opacity="0.36"/>
+      <stop offset="0.82" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="edgeCherosvg" cx="84%" cy="91%" r="34%">
+      <animate attributeName="cx" dur="13.9s" values="84.0%;72.1%;84.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="12.5s" values="91.0%;67.8%;91.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="r" dur="18.3s" values="34.0%;25.2%;34.0%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#073bff" stop-opacity="1"/>
+      <stop offset="0.74" stop-color="#073bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="readherosvg" cx="50%" cy="50%" r="38%">
+      <stop offset="0" stop-color="#050a36" stop-opacity="0.46"/>
+      <stop offset="0.58" stop-color="#050a36" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#050a36" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grainherosvg" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch" seed="0" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.38"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#baseherosvg)"/>
+  <rect width="1600" height="900" fill="url(#edgeAherosvg)"/>
+  <rect width="1600" height="900" fill="url(#edgeBherosvg)"/>
+  <rect width="1600" height="900" fill="url(#edgeCherosvg)" opacity="0.62"/>
+  <rect width="1600" height="900" fill="url(#readherosvg)"/>
+  <rect width="1600" height="900" filter="url(#grainherosvg)" opacity="0.22"/>
+</svg>

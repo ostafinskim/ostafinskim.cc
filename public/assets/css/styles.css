@@ -1,0 +1,251 @@
+@import "./bootstrap.min.css";
+@import "./style.css";
+
+@import "./vertical-rhythm.min.css";
+@import "./splitting.css";
+@import "./demo-bold/demo-bold.css";
+
+@import "./custom.css";
+@import "./style-responsive.css";
+
+/* Body font comes self-hosted via next/font (app/layout.js); demo-bold's
+   Google-hosted "Roboto" reference is remapped onto that variable. */
+.theme-bold {
+  --font-global: var(--font-roboto, Roboto), sans-serif;
+}
+
+/* Images sized by width attributes keep their aspect ratio instead of the
+   height presentational hint — prevents layout shift on load. */
+img.w-100 {
+  height: auto;
+}
+
+/* highlight.js makes code.hljs its own scroll region (overflow-x: auto),
+   which axe flags as an unfocusable scrollable region. Let the <pre>
+   (tabindex="0") own the scrolling instead. */
+pre[tabindex] code.hljs {
+  overflow-x: visible;
+}
+
+/* Inline code — bootstrap's pink #d63384 fails WCAG AA contrast on both the
+   near-black and white backgrounds; keep it monochrome (theme-me style). */
+.blog-item-body code:not(.hljs) {
+  color: rgba(0, 0, 0, 0.82);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.1em 0.35em;
+}
+.light-content .blog-item-body code:not(.hljs) {
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Tech stack — big icons in a responsive grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 1.5rem 1rem;
+}
+.tech-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  cursor: default;
+}
+.tech-tile-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  transition: transform 0.25s ease;
+}
+.tech-tile:hover .tech-tile-icon {
+  transform: translateY(-0.25rem) scale(1.1);
+}
+.tech-tile-name {
+  line-height: 1.3;
+}
+
+/* Keyboard focus — template wired focus ring to a dead .focus-visible
+   polyfill class; restore visible ring on native :focus-visible. */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.btn-mod:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible,
+.filter:focus-visible,
+.scroll-down-4:focus-visible {
+  outline: 3px solid #36a367 !important;
+  outline-offset: 3px !important;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   theme-me — Linear-inspired palette (scoped to portfolio page)
+   Refined near-black + hairline borders + sparing accent pulled
+   from the template's primary gradient (blue→purple→pink).
+   Swap --accent to recolour the highlights.
+   ============================================================ */
+.theme-me {
+  --color-dark-1: #08090a; /* page base */
+  --color-dark-2: #0e0f11; /* elevated surface */
+  --color-dark-3: #16171a;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: rgba(255, 255, 255, 0.92);
+  --accent-soft: rgba(255, 255, 255, 0.06);
+  --accent-line: rgba(255, 255, 255, 0.16);
+}
+
+/* Footer — elevated surface + hairline separation (not a colour block) */
+.theme-me .footer-1 {
+  background: var(--color-dark-2) !important;
+  border-top: 1px solid var(--line);
+}
+
+/* Section dividers -> crisp hairlines */
+.theme-me hr.white,
+.theme-me hr.black {
+  border-color: var(--line) !important;
+  opacity: 1 !important;
+}
+
+/* Timeline month labels -> accent chip with a hairline edge so it reads
+   as a badge on the near-black background */
+.theme-me .light-content .section-title-inline {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-line);
+  padding: 3px 14px;
+}
+
+/* Animated links hover -> accent */
+.theme-me .link-strong-hovered {
+  color: var(--accent) !important;
+}
+
+/* Tech pills hover -> accent hairline + tint */
+.theme-me .tech-pill:hover {
+  border-color: var(--accent) !important;
+  background-color: var(--accent-soft);
+}
+
+/* Status pill dot + scroll-down hover accent */
+.theme-me .hs-status::before {
+  background: var(--accent) !important;
+}
+.theme-me .scroll-down-4:hover {
+  color: var(--accent);
+}
+
+/* Theme toggle button — sits inline in the nav, before "Let's talk" */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  margin-right: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: transform 0.25s ease, opacity 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+.theme-toggle:hover {
+  opacity: 1;
+  transform: rotate(-18deg) scale(1.08);
+  color: var(--accent, currentColor);
+  border-color: var(--accent, currentColor);
+}
+
+/* ------------------------------------------------------------------
+   Theme-aware nav contrast.
+   The template drives nav colours from .main-nav.dark, but the page
+   theme lives on the outer .theme-me / .dark-mode wrapper and stays
+   correct through the transparent<->solid scroll swap. Drive nav text,
+   logo, the toggle and the "Let's talk" button from that stable class
+   so nothing goes invisible when the theme flips.
+   ------------------------------------------------------------------ */
+
+/* Light theme -> body copy dark enough for AA (template gray-1 #777 fails
+   4.5:1 at 23px regular) */
+.theme-me:not(.dark-mode) .section-descr {
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+/* Light theme -> dark ink on light bar */
+.theme-me:not(.dark-mode) .main-nav .inner-nav > ul > li > a,
+.theme-me:not(.dark-mode) .main-nav .logo,
+.theme-me:not(.dark-mode) .main-nav a.logo:hover {
+  color: var(--color-dark-1);
+}
+.theme-me:not(.dark-mode) .theme-toggle {
+  color: var(--color-dark-1);
+  border: 1px solid rgba(0, 0, 0, 0.28);
+}
+.theme-me:not(.dark-mode) .main-nav .mobile-nav-icon,
+.theme-me:not(.dark-mode) .main-nav .mobile-nav-icon:before,
+.theme-me:not(.dark-mode) .main-nav .mobile-nav-icon:after {
+  background: var(--color-dark-1);
+}
+/* "Let's talk" pill -> readable on the light bar (template only styles
+   btn-border-white under .dark/.dark-mode) */
+.theme-me:not(.dark-mode) .main-nav .btn-mod.btn-border-white {
+  color: var(--color-dark-1);
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  background: transparent;
+}
+.theme-me:not(.dark-mode) .main-nav .btn-mod.btn-border-white:hover,
+.theme-me:not(.dark-mode) .main-nav .btn-mod.btn-border-white:focus {
+  color: #fff;
+  border-color: var(--color-dark-1);
+  background: var(--color-dark-1);
+}
+
+/* Mobile dropdown panel: the template hardcodes a near-black panel, and the
+   light-theme ink rules above win on specificity inside it — so in light
+   mode give the panel a light background to match the dark ink. */
+.theme-me:not(.dark-mode) .mobile-on .desktop-nav ul {
+  background: rgba(255, 255, 255, 0.99);
+}
+.theme-me:not(.dark-mode) .mobile-on .desktop-nav ul li a {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+  color: var(--color-dark-1);
+}
+.theme-me:not(.dark-mode) .mobile-on .desktop-nav ul li a:hover,
+.theme-me:not(.dark-mode) .mobile-on .desktop-nav ul li a.active {
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--color-dark-1);
+}
+/* Template forces the bordered button white inside the mobile panel;
+   on the light panel that made "Let's talk" invisible. */
+.theme-me:not(.dark-mode) .mobile-on .btn-border,
+.theme-me:not(.dark-mode) .mobile-on .btn-border:hover {
+  color: var(--color-dark-1) !important;
+  border-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Dark theme -> light ink on dark bar */
+.theme-me.dark-mode .main-nav .inner-nav > ul > li > a,
+.theme-me.dark-mode .main-nav .logo,
+.theme-me.dark-mode .main-nav a.logo:hover {
+  color: #fff;
+}
+.theme-me.dark-mode .theme-toggle {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Light theme -> same idea inverted: near-black ink, soft gray chip */
+.theme-me:not(.dark-mode) {
+  --accent: rgba(0, 0, 0, 0.88);
+  --accent-soft: rgba(0, 0, 0, 0.05);
+  --accent-line: rgba(0, 0, 0, 0.16);
+  --line: rgba(0, 0, 0, 0.08);
+}

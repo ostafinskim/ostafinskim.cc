@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 819" width="1200" height="819" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="baseblog4svg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00875a"/>
+      <stop offset="0.45" stop-color="#a7ff83" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#00875a"/>
+    </linearGradient>
+    <radialGradient id="gblog4svg_0" cx="64.8%" cy="67.7%" r="62.4%">
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.20" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gblog4svg_1" cx="28.9%" cy="71.4%" r="40.4%">
+      <stop offset="0" stop-color="#00875a" stop-opacity="1"/>
+      <stop offset="0.24" stop-color="#00875a" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#00875a" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gblog4svg_2" cx="81.4%" cy="12.4%" r="75.3%">
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.25" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gblog4svg_3" cx="10.8%" cy="25.4%" r="65.1%">
+      <stop offset="0" stop-color="#00875a" stop-opacity="1"/>
+      <stop offset="0.21" stop-color="#00875a" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#00875a" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gblog4svg_4" cx="75.4%" cy="92.9%" r="73.0%">
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.25" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gblog4svg_5" cx="22.3%" cy="18.1%" r="66.4%">
+      <animate attributeName="cx" dur="24.3s" values="22.3%;56.3%;22.3%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="20.8s" values="18.1%;61.7%;18.1%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#00875a" stop-opacity="1"/>
+      <stop offset="0.27" stop-color="#00875a" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#00875a" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gblog4svg_6" cx="23.2%" cy="78.7%" r="71.7%">
+      <animate attributeName="cx" dur="18.9s" values="23.2%;49.8%;23.2%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="22.7s" values="78.7%;39.1%;78.7%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.21" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="warpblog4svg" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="10946" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="grainblog4svg" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.42"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1200" height="819" fill="url(#baseblog4svg)"/>
+  <g filter="url(#warpblog4svg)"><rect width="1200" height="819" fill="url(#gblog4svg_0)" opacity="0.94"/><rect width="1200" height="819" fill="url(#gblog4svg_1)" opacity="0.94"/><rect width="1200" height="819" fill="url(#gblog4svg_2)" opacity="0.72"/><rect width="1200" height="819" fill="url(#gblog4svg_3)" opacity="0.72"/><rect width="1200" height="819" fill="url(#gblog4svg_4)" opacity="0.72"/></g>
+  <rect width="1200" height="819" fill="url(#gblog4svg_5)" opacity="0.72"/><rect width="1200" height="819" fill="url(#gblog4svg_6)" opacity="0.72"/>
+  <rect width="1200" height="819" fill="#a7ff83" opacity="0.08"/>
+  <rect width="1200" height="819" filter="url(#grainblog4svg)" opacity="0.28"/>
+</svg>

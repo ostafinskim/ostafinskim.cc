@@ -1,33 +1,36 @@
-# Miroslaw Ostafinski - Portfolio & Blog
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![Miroslaw Ostafinski Portfolio & Blog](/public/images/screenshot.png)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/421d0189-e881-4e30-8552-ed4ff74cf2b7/deploy-status)](https://app.netlify.com/sites/storied-otter-dadb82/deploys)
+## Getting Started
 
-## Overview
+First, run the development server:
 
-This is my personal portfolio and blog site. It is built with [Astro](https://astro.build) and hosted on [Netlify](https://netlify.com).
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-I build this project to learn Astro and to have a place to share my thoughts and projects.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-I'm planning to write about web development, software engineering, and other topics that interest me.
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-I'm also planning to share some of my projects and experiments.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-I hope you will find something interesting here.
+## Learn More
 
-## 🚀 Quick start
+To learn more about Next.js, take a look at the following resources:
 
-All commands are run from the root of the project, from a terminal:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## License
+## Deploy on Vercel
 
-This project is open source and available under the [MIT License](LICENSE.md).
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

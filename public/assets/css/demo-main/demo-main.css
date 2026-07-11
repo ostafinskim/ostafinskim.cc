@@ -1,0 +1,167 @@
+.theme-main .dark-mode {
+  --color-dark-1: #121212;
+  --color-dark-2: #181818;
+}
+.theme-main .btn-mod i.align-center:before {
+  transform: translateY(0.12em);
+}
+.theme-main .btn-mod.btn-w {
+  background: rgba(255, 255, 255, 0.98);
+}
+.theme-main .btn-mod.btn-border-w {
+  border-color: rgba(255, 255, 255, 0.98);
+}
+.theme-main .btn-mod.btn-small {
+  padding: 7px 15px 6px;
+}
+.theme-main .section-caption-border {
+  font-size: 15px;
+  letter-spacing: 0.039em;
+}
+.theme-main .section-title-strong {
+  font-size: 76px;
+}
+.theme-main .features-list-icon {
+  top: 0.185em;
+  margin-right: 9px;
+}
+.theme-main .features-list-text {
+  font-size: 20px;
+  letter-spacing: -0.008em;
+}
+.theme-main .marquee-style-2 {
+  font-size: 26px;
+  letter-spacing: 0.06em;
+}
+.theme-main .testimonials-4-author {
+  color: var(--color-dark-1);
+}
+.theme-main .testimonials-4-author .small {
+  color: var(--color-gray-1);
+}
+.theme-main .testimonials-3-author .small {
+  color: var(--color-gray-1);
+}
+.theme-main .light-content .testimonials-3-author .small {
+  color: var(--color-dark-mode-gray-1);
+}
+.theme-main .big-icon-gradient {
+  box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.5);
+}
+.theme-main .features-2-item:before {
+  border: 1px solid var(--color-dark-1);
+  background: none;
+  opacity: 0.15;
+  transition: opacity 0.27s var(--ease-default);
+  z-index: -1;
+}
+.theme-main .features-2-item:hover:before {
+  opacity: 1;
+}
+.theme-main .features-2-label {
+  font-weight: 500;
+  color: var(--color-dark-1);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+.theme-main .features-2-icon:before {
+  background: var(--color-gray-light-1);
+  opacity: 1;
+  z-index: -1;
+}
+.theme-main .features-2-icon svg {
+  fill: var(--color-dark-1);
+}
+.theme-main .light-content .features-2-item:before {
+  background: var(--color-dark-mode-gray-2);
+  border: 1px solid var(--color-dark-mode-gray-2);
+  transition: border-color 0.27s var(--ease-default);
+  opacity: 1;
+  z-index: -1;
+}
+.theme-main .light-content .features-2-item:hover:before {
+  background: var(--color-dark-mode-gray-2);
+  opacity: 1;
+}
+.theme-main .light-content .features-2-label {
+  color: #fff;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+.theme-main .light-content .features-2-icon {
+  color: #fff;
+}
+.theme-main .light-content .features-2-icon svg {
+  fill: #fff;
+}
+.theme-main .light-content .features-2-icon:before {
+  background: var(--color-dark-mode-gray-2);
+  opacity: 1;
+  z-index: -1;
+}
+.theme-main .light-content .features-2-descr {
+  color: var(--color-dark-mode-gray-1);
+}
+.theme-main .services-3-title {
+  font-size: 22px;
+}
+.theme-main .services-3-text {
+  font-size: 17px;
+}
+.theme-main .bg-border-gradient:before {
+  background: none;
+  border: 1px solid var(--color-dark-1);
+  opacity: 0.15;
+}
+.theme-main .light-content .bg-border-gradient:before {
+  background: none;
+  border: 1px solid #fff;
+  opacity: 0.25;
+}
+.theme-main .bg-gradient-dark-alpha-1:before {
+  opacity: 0.9;
+}
+.theme-main .bg-gradient-dark-alpha-2:before {
+  opacity: 0.9;
+}
+.theme-main .tpl-minimal-tabs {
+  font-size: 16px;
+  letter-spacing: inherit;
+  text-transform: none;
+}
+.theme-main .ci-title {
+  font-size: 20px;
+}
+.theme-main .call-action-4-image-1,
+.theme-main .call-action-4-image-2 {
+  border-radius: 0;
+}
+.theme-main .light-content .form input.newsletter-field {
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.theme-main .light-content .form input.newsletter-field:hover {
+  border-color: rgba(255, 255, 255, 0.26);
+}
+.theme-main .light-content .form input.newsletter-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-default), font-size 0s;
+}
+.theme-main .light-content .form input.newsletter-field:hover::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.theme-main .light-content .form input.newsletter-field:focus {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+@media only screen and (max-width: 1366px) {
+  .theme-main .section-title-strong {
+    font-size: calc(1.363rem + 3.97vw);
+  }
+  .theme-main .marquee-style-2 {
+    font-size: calc(0.972rem + 0.76vw);
+  }
+}

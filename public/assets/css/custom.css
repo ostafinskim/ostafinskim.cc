@@ -1,0 +1,169 @@
+.Typewriter,
+.typewrite {
+  display: inline-block;
+}
+.typewrite {
+  margin-left: 10px;
+}
+.dark-mode .dark-white {
+  color: white !important;
+}
+.dark-mode-logo {
+  display: none;
+}
+.dark .dark-mode-logo {
+  display: block;
+}
+.light-mode-logo {
+  display: block;
+}
+.dark .light-mode-logo {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .mn-has-sub:hover + *,
+  .mn-has-sub + *:hover {
+    display: block !important;
+    z-index: 1;
+  }
+}
+
+.fadeInText {
+  animation: animationFadeText 0.5s linear 0s 1;
+}
+@keyframes animationFadeText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dark-mode .svg-shape {
+  filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
+}
+.dark-mode .svg-dark {
+  filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
+}
+.dark-mode .image-filter {
+  filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
+}
+html {
+  scroll-behavior: initial !important;
+}
+a {
+  cursor: pointer;
+}
+.mobile-on .desktop-nav {
+  height: fit-content;
+  max-height: 0px;
+  display: block !important;
+  overflow: scroll;
+  transition: 0.6s;
+}
+
+@media (min-width: 1025px) {
+  .mobile-on .mn-sub {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .mobile-on .js-opened .mn-sub.mobile-sub-active {
+    max-height: 1000px;
+  }
+}
+.dark-mode .form .form-tip-2 {
+  color: var(--color-dark-mode-gray-1);
+  background-color: var(--color-dark-2) !important;
+}
+.btn-mod.btn-w:hover,
+.btn-mod.btn-w:focus {
+  background: none !important;
+}
+@media (max-width: 500px) {
+  .team-carousel .owl-prev.owl-prev-testimonial-1 {
+    left: 21px;
+  }
+}
+
+.mn-sub {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.mn-sub.open {
+  max-height: 200px;
+  overflow: auto !important;
+  opacity: 1 !important;
+}
+
+/* Mobile nav: the template pins .items-end (theme toggle + "Let's talk")
+   absolute top-right, so in the mobile dropdown it floated over the nav
+   links with a mismatched background. Let it flow below the links instead
+   and inherit the panel background (dark or light) like the rest. */
+@media (max-width: 1024px) {
+  .mobile-on .inner-nav > ul.items-end {
+    position: static;
+    top: auto;
+    right: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 10px;
+  }
+  .mobile-on .inner-nav > ul.items-end > li {
+    overflow: visible;
+    margin: 0 !important;
+  }
+  .mobile-on .items-end .theme-toggle {
+    margin-right: 0;
+    flex: 0 0 auto;
+  }
+  .mobile-on .items-end > li:last-child {
+    flex: 1 1 auto;
+  }
+  /* Drop the full-row link chrome on the "Let's talk" anchor so the pill
+     button shows properly inside the flex row. */
+  .mobile-on .items-end > li:last-child > a {
+    display: block;
+    width: 100%;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+  }
+  .mobile-on .items-end .btn-mod {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+html {
+  scroll-behavior: smooth !important;
+}
+
+.logo-mark {
+  /* Self-hosted via next/font (app/layout.js), was Google-hosted */
+  font-family: var(--font-fascinate, "Fascinate Inline"), cursive;
+  font-weight: 400 !important;
+  line-height: 1;
+}
+.logo.logo-mark,
+a.logo.logo-mark:hover,
+.main-nav.dark .logo.logo-mark,
+.main-nav.dark a.logo.logo-mark:hover {
+  font-size: 2.5rem;
+  font-weight: 400 !important;
+}
+.footer-mark {
+  font-size: 2.25rem;
+  vertical-align: -0.175em;
+  margin-right: 0.35em;
+}
+.fw-social-inline-item .link-hover-anim {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.fw-social-inline-item .link-hover-anim svg {
+  flex-shrink: 0;
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 819" width="1200" height="819" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="basework2svg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00875a"/>
+      <stop offset="0.45" stop-color="#a7ff83" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#00875a"/>
+    </linearGradient>
+    <radialGradient id="gwork2svg_0" cx="43.8%" cy="45.1%" r="48.8%">
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.22" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gwork2svg_1" cx="75.4%" cy="21.4%" r="50.9%">
+      <stop offset="0" stop-color="#00875a" stop-opacity="1"/>
+      <stop offset="0.24" stop-color="#00875a" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#00875a" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gwork2svg_2" cx="79.7%" cy="8.7%" r="56.6%">
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.20" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gwork2svg_3" cx="86.6%" cy="63.7%" r="60.4%">
+      <stop offset="0" stop-color="#00875a" stop-opacity="1"/>
+      <stop offset="0.20" stop-color="#00875a" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#00875a" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gwork2svg_4" cx="39.8%" cy="89.3%" r="60.1%">
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.26" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gwork2svg_5" cx="15.8%" cy="47.4%" r="40.3%">
+      <animate attributeName="cx" dur="16.6s" values="15.8%;-21.8%;15.8%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="18.7s" values="47.4%;8.2%;47.4%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#00875a" stop-opacity="1"/>
+      <stop offset="0.19" stop-color="#00875a" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#00875a" stop-opacity="0"/>
+    </radialGradient><radialGradient id="gwork2svg_6" cx="81.5%" cy="7.2%" r="38.9%">
+      <animate attributeName="cx" dur="25.6s" values="81.5%;105.1%;81.5%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <animate attributeName="cy" dur="23.3s" values="7.2%;-31.1%;7.2%" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#a7ff83" stop-opacity="1"/>
+      <stop offset="0.19" stop-color="#a7ff83" stop-opacity="0.86"/>
+      <stop offset="0.78" stop-color="#a7ff83" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="warpwork2svg" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="21" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="grainwork2svg" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.42"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1200" height="819" fill="url(#basework2svg)"/>
+  <g filter="url(#warpwork2svg)"><rect width="1200" height="819" fill="url(#gwork2svg_0)" opacity="0.94"/><rect width="1200" height="819" fill="url(#gwork2svg_1)" opacity="0.94"/><rect width="1200" height="819" fill="url(#gwork2svg_2)" opacity="0.72"/><rect width="1200" height="819" fill="url(#gwork2svg_3)" opacity="0.72"/><rect width="1200" height="819" fill="url(#gwork2svg_4)" opacity="0.72"/></g>
+  <rect width="1200" height="819" fill="url(#gwork2svg_5)" opacity="0.72"/><rect width="1200" height="819" fill="url(#gwork2svg_6)" opacity="0.72"/>
+  <rect width="1200" height="819" fill="#a7ff83" opacity="0.08"/>
+  <rect width="1200" height="819" filter="url(#grainwork2svg)" opacity="0.28"/>
+</svg>
