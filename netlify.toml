@@ -1,0 +1,11 @@
+# Overrides the UI build settings (publish dir "dist" is a leftover from the
+# old Astro site). The Next.js runtime plugin handles routing/output itself.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
