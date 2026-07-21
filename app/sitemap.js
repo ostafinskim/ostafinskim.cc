@@ -1,7 +1,7 @@
 import { getAllPosts } from "@/lib/posts";
 import { portfolios2 } from "@/data/portfolio";
 
-const BASE_URL = "https://ostafinskim.cc";
+const BASE_URL = "https://ostafinski.cc";
 
 export default function sitemap() {
   const staticRoutes = ["", "/about", "/blog"].map((route) => ({

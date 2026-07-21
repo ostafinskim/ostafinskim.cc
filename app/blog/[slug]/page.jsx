@@ -16,7 +16,7 @@ export async function generateMetadata(props) {
       type: "article",
       title: post.title,
       description: post.description,
-      images: post.image ? [post.image] : undefined,
+      // og:image comes from the sibling opengraph-image.jsx (dynamic PNG).
     },
   };
 }

@@ -23,7 +23,7 @@ const fascinateInline = Fascinate_Inline({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://ostafinskim.cc"),
+  metadataBase: new URL("https://ostafinski.cc"),
   title: {
     default: "Miro Ostafinski — Full Stack Developer",
     template: "%s — Miro Ostafinski",
@@ -34,7 +34,7 @@ export const metadata = {
     type: "website",
     siteName: "Miro Ostafinski",
     locale: "en_GB",
-    url: "https://ostafinskim.cc",
+    url: "https://ostafinski.cc",
   },
   twitter: {
     card: "summary_large_image",

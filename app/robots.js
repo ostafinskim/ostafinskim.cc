@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://ostafinskim.cc/sitemap.xml",
+    sitemap: "https://ostafinski.cc/sitemap.xml",
   };
 }
