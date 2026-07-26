@@ -50,6 +50,29 @@ export default function WorkView({ item }) {
                       <div>{item.description}</div>
                     </div>
                     <hr className="mb-20" />
+                    {item.links?.length > 0 && (
+                      <>
+                        <div className="row small">
+                          <div className="col-sm-4">
+                            <b>Live:</b>
+                          </div>
+                          <div className="col-sm-8">
+                            {item.links.map((link) => (
+                              <div key={link.url}>
+                                <a
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {link.label}
+                                </a>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <hr className="mb-20" />
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className="col-md-8">

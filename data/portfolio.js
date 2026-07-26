@@ -16,6 +16,10 @@ export const portfolios2 = [
 		categories: ['development'],
 		role: 'Front-End Developer',
 		stack: 'WordPress, ACF, PHP, JavaScript, SCSS, WCAG 2.1 AA',
+		links: [
+			{ label: 'UK Parliament Week', url: 'https://www.ukparliamentweek.org/en/' },
+			{ label: 'Parliament education service', url: 'https://learning.parliament.uk/en/' },
+		],
 		photos: shots('parliament'),
 	},
 	{
@@ -27,6 +31,7 @@ export const portfolios2 = [
 		categories: ['development'],
 		role: 'Front-End Developer',
 		stack: 'Craft CMS, Twig, JavaScript, SCSS',
+		links: [{ label: 'fitzmuseum.cam.ac.uk', url: 'https://fitzmuseum.cam.ac.uk/' }],
 		photos: shots('fitzwilliam'),
 	},
 	{
@@ -38,6 +43,7 @@ export const portfolios2 = [
 		categories: ['development'],
 		role: 'Front-End Developer',
 		stack: 'WordPress, ACF, PHP, JavaScript, SCSS',
+		links: [{ label: 'kinship.org.uk', url: 'https://kinship.org.uk/' }],
 		photos: shots('kinship'),
 	},
 	{
@@ -49,6 +55,10 @@ export const portfolios2 = [
 		categories: ['development'],
 		role: 'Front-End Developer',
 		stack: 'WordPress, ACF, PHP, JavaScript, SCSS',
+		links: [
+			{ label: 'hs2.org.uk', url: 'https://www.hs2.org.uk/' },
+			{ label: 'The Core (Safe at Heart)', url: 'https://safety.hs2.org.uk/' },
+		],
 		photos: shots('hs2'),
 	},
 	{
@@ -60,6 +70,7 @@ export const portfolios2 = [
 		categories: ['development'],
 		role: 'Front-End Developer',
 		stack: 'WordPress, ACF, WPML, PHP, JavaScript, SCSS',
+		links: [{ label: 'syrris.com', url: 'https://www.syrris.com/' }],
 		photos: shots('syrris'),
 	},
 	{
@@ -71,6 +82,7 @@ export const portfolios2 = [
 		categories: ['development'],
 		role: 'Front-End Developer',
 		stack: 'WordPress, ACF, PHP, JavaScript, SCSS',
+		links: [{ label: 'barcham.co.uk', url: 'https://www.barcham.co.uk/' }],
 		photos: shots('barcham'),
 	},
 ]

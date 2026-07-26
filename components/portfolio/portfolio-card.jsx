@@ -37,6 +37,17 @@ export default function PortfolioCard({ item, reverse = false }) {
           <div>
             <AnimatedLink href={`/work/${item.slug}`}>View Project</AnimatedLink>
           </div>
+          {item.links?.[0] && (
+            <div className="mt-10 small">
+              <a
+                href={item.links[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit live site
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>
