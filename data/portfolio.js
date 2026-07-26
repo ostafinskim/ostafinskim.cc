@@ -1,42 +1,76 @@
-const defaultPhotos = [
-	'/assets/images/gen/shot-1.svg',
-	'/assets/images/gen/shot-2.svg',
-	'/assets/images/gen/shot-3.svg',
-	'/assets/images/gen/shot-4.svg',
+// Cover + gallery images are real screenshots of the live sites, captured by
+// `node scripts/capture-shots.mjs` into /assets/images/work.
+const shots = (name) => [
+	`/assets/images/work/${name}-1.webp`,
+	`/assets/images/work/${name}-2.webp`,
+	`/assets/images/work/${name}-3.webp`,
 ]
 
 export const portfolios2 = [
 	{
 		slug: 'uk-parliament-website',
-		imageUrl: '/assets/images/gen/work-1.svg',
-		title: 'UK Parliament Website',
+		imageUrl: '/assets/images/work/parliament-cover.webp',
+		title: 'UK Parliament',
 		description:
-			'WCAG-compliant public sector platform serving 2M+ users. Implemented accessibility standards across markup and components, securing a 98% public-sector audit score.',
+			'Front-end work across the UK Parliament estate, including UK Parliament Week and the Parliament education service. Theme templates and ACF-driven content blocks with WCAG-compliant markup, serving schools, community groups and the wider public at national scale.',
 		categories: ['development'],
-		role: 'Full-Stack Developer',
-		stack: 'Next.js, React, TypeScript, Node.js, PostgreSQL',
-		photos: defaultPhotos,
+		role: 'Front-End Developer',
+		stack: 'WordPress, ACF, PHP, JavaScript, SCSS, WCAG 2.1 AA',
+		photos: shots('parliament'),
 	},
 	{
 		slug: 'fitzwilliam-museum',
-		imageUrl: '/assets/images/gen/work-2.svg',
+		imageUrl: '/assets/images/work/fitzwilliam-cover.webp',
 		title: 'The Fitzwilliam Museum',
 		description:
-			'Templates, layouts and interactive components for a high-traffic museum website, built with Laravel Blade, CSS and JavaScript.',
+			'Templates, layouts and interactive components for a high-traffic museum website — visit planning, exhibition listings and the online collection.',
 		categories: ['development'],
-		role: 'Full-Stack Developer',
-		stack: 'Next.js, React, TypeScript, Node.js, PostgreSQL',
-		photos: defaultPhotos,
+		role: 'Front-End Developer',
+		stack: 'Craft CMS, Twig, JavaScript, SCSS',
+		photos: shots('fitzwilliam'),
 	},
 	{
-		slug: 'ecommerce-platform',
-		imageUrl: '/assets/images/gen/work-3.svg',
-		title: 'E-commerce Platform',
+		slug: 'kinship',
+		imageUrl: '/assets/images/work/kinship-cover.webp',
+		title: 'Kinship',
 		description:
-			'Built the RESTful API (Express.js) and admin dashboard (Next.js, React, TypeScript, Material UI) for a custom e-commerce platform, serving the website, a native Android app and a CMS.',
+			'Front-end build for the leading UK kinship care charity: advice and information journeys, workshop and event listings, campaign pages for #ValueOurLove and donation entry points, assembled from ACF content blocks the team edits themselves. Built for carers under pressure, so clarity and accessibility came first.',
 		categories: ['development'],
-		role: 'Full-Stack Developer',
-		stack: 'Next.js, React, TypeScript, Node.js, PostgreSQL',
-		photos: defaultPhotos,
+		role: 'Front-End Developer',
+		stack: 'WordPress, ACF, PHP, JavaScript, SCSS',
+		photos: shots('kinship'),
+	},
+	{
+		slug: 'hs2',
+		imageUrl: '/assets/images/work/hs2-cover.webp',
+		title: 'HS2',
+		description:
+			"Front-end for the corporate site of Britain's high-speed rail programme, plus The Core — the Safe at Heart resources hub for HS2 staff and supply chain. Templates and ACF blocks covering construction updates, community and supplier information, and a members-only library of health and safety best practice.",
+		categories: ['development'],
+		role: 'Front-End Developer',
+		stack: 'WordPress, ACF, PHP, JavaScript, SCSS',
+		photos: shots('hs2'),
+	},
+	{
+		slug: 'syrris',
+		imageUrl: '/assets/images/work/syrris-cover.webp',
+		title: 'Syrris',
+		description:
+			'Front-end for a scientific instrument manufacturer — flow and batch chemistry reactor systems across product, application and support sections, built as ACF blocks and translated through WPML.',
+		categories: ['development'],
+		role: 'Front-End Developer',
+		stack: 'WordPress, ACF, WPML, PHP, JavaScript, SCSS',
+		photos: shots('syrris'),
+	},
+	{
+		slug: 'barcham-trees',
+		imageUrl: '/assets/images/work/barcham-cover.webp',
+		title: 'Barcham Trees',
+		description:
+			"Store front-end for a specialist container-grown tree nursery: a faceted catalogue of 450+ trees filtered by type, shape and height, size-based pricing with bulk discount tiers, product galleries with growing data, an accessories range and the basket and checkout flow.",
+		categories: ['development'],
+		role: 'Front-End Developer',
+		stack: 'WordPress, ACF, PHP, JavaScript, SCSS',
+		photos: shots('barcham'),
 	},
 ]

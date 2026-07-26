@@ -9,8 +9,9 @@ export default function Portfolio() {
         <div className="col-lg-5 mb-md-30">
           <OutlineTitle text="Work & Projects" />
           <p className="section-text mb-0">
-            Selected projects across the public sector, culture and e-commerce
-            — from high-traffic platforms to type-safe APIs.
+            Selected projects across the public sector, culture, charity and
+            e-commerce — high-traffic sites built to stay accessible and
+            editable by the teams who run them.
           </p>
         </div>
       </div>

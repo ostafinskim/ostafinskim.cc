@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/common/page-hero";
 import ThemedShell from "@/components/common/themed-shell";
@@ -23,7 +24,16 @@ export default function BlogPostView({ post }) {
                 <span className="visually-hidden">Date:</span> {post.date}
               </div>
               <div className="d-inline-block me-3">
-                <i className="mi-user size-16" />{" "}
+                {/* Single-author blog — the avatar is always me, so it ships
+                    locally instead of coming from Gravatar or similar. */}
+                <Image
+                  src="/assets/images/miro.webp"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="rounded-circle align-middle me-1"
+                  style={{ objectFit: "cover" }}
+                />
                 <span className="visually-hidden">Author:</span> {post.author}
               </div>
               {post.tags?.length > 0 && (
