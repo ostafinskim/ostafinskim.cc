@@ -116,7 +116,7 @@ export function renderOgImage({ title, subtitle, eyebrow }) {
             color: "#8b8b96",
           }}
         >
-          <span>ostafinski.cc</span>
+          <span>miro-codes.com</span>
           <span>github.com/ostafinskim</span>
         </div>
       </div>
@@ -135,7 +135,7 @@ const ogFonts = [
 // then a labelled contact block. No tagline, no marketing copy.
 export function renderCardImage() {
   const contacts = [
-    ["Web", "ostafinski.cc"],
+    ["Web", "miro-codes.com"],
     ["Email", "ostafinskim@gmail.com"],
     ["GitHub", "github.com/ostafinskim"],
     ["LinkedIn", "linkedin.com/in/ostafinskim"],
